@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartman Šumska Tajna | Mokra Gora - Luksuzni Smeštaj u Prirodi</title>
+  <meta name="description" content="Apartman Šumska Tajna u Mokroj Gori. Komforan smeštaj sa 2 spavaće sobe, dnevnim boravkom, opremljenom kuhinjom, kupatilom i letnjikovcem pored reke Kamešine. 400m od Šarganske Osmice.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#pocetna" class="brand-logo">
+        <img src="sumskatajna slike/logo.jpg" alt="Apartman Šumska Tajna Logo" class="brand-logo-img">
+        <div class="brand-text">ŠUMSKA <span>TAJNA</span></div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#pocetna" class="nav-link" onclick="closeMenu()">Početna</a>
+        <a href="#o-apartmanu" class="nav-link" onclick="closeMenu()">O Apartmanu</a>
+        <a href="#prostorije" class="nav-link" onclick="closeMenu()">Prostorije</a>
+        <a href="#galerija" class="nav-link" onclick="closeMenu()">Galerija</a>
+        <a href="#atrakcije" class="nav-link" onclick="closeMenu()">Atrakcije</a>
+        <a href="#kucni-red" class="nav-link" onclick="closeMenu()">Kućni Red</a>
+        <a href="#kontakt" class="nav-link" onclick="closeMenu()">Kontakt</a>
+        <div class="nav-mobile-actions">
+          <div class="lang-switch">
+            <button class="lang-btn active" id="btnSR" onclick="setLanguage('sr')">SR</button>
+            <button class="lang-btn" id="btnEN" onclick="setLanguage('en')">EN</button>
+          </div>
+          <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-booking-nav">
+            <i class="fa-solid fa-hotel"></i> <span>Booking</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-booking-nav">
+          <i class="fa-solid fa-hotel"></i> <span>Booking</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="pocetna">
+    <div class="hero-bg">
+      <img src="sumskatajna slike/kuca.jpg" alt="Apartman Šumska Tajna Mokra Gora Exterior">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-tree"></i> <span data-sr="Mokra Gora, Srbija" data-en="Mokra Gora, Serbia">Mokra Gora, Srbija</span>
+      </div>
+      <h1 class="hero-title" data-sr="Vaša oaza mira u <span>srcu prirode</span>" data-en="Your oasis of peace in the <span>heart of nature</span>">
+        Vaša oaza mira u <span>srcu prirode</span>
+      </h1>
+      <p class="hero-subtitle" data-sr="Samostalni objekat sa 2 spavaće sobe, dnevnim boravkom, opremljenom kuhinjom, kupatilom i privatnim letnjikovcem pored reke Kamešine." data-en="Detached house featuring 2 bedrooms, living room, full kitchen, bathroom, and private gazebo right by the Kamešina river.">
+        Samostalni objekat sa 2 spavaće sobe, dnevnim boravkom, opremljenom kuhinjom, kupatilom i privatnim letnjikovcem pored reke Kamešine.
+      </p>
+      
+      <!-- Primary Action Buttons -->
+      <div class="hero-cta">
+        <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-booking-hero">
+          <i class="fa-solid fa-hotel"></i> <span>Rezervišite na Booking</span>
+        </a>
+        <a href="tel:0605210322" class="btn-primary">
+          <i class="fa-solid fa-phone"></i> <span>Pozovite 060 521 0322</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Banner Bar -->
+  <div class="booking-banner-bar">
+    <div class="container booking-banner-flex">
+      <div class="bb-item">
+        <i class="fa-solid fa-star gold-star"></i>
+        <span>Pronađite nas na <strong>Booking.com</strong> sa vrhunskim recenzijama i ocenama!</span>
+      </div>
+      <div class="bb-item">
+        <i class="fa-brands fa-instagram"></i>
+        <span>Zapratite nas: <a href="https://www.instagram.com/sumska_tajna" target="_blank">@sumska_tajna</a></span>
+      </div>
+      <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-sm-booking">
+        Pogledajte na Booking.com <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Quick Highlights Bar -->
+  <div class="specs-bar">
+    <div class="container">
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-icon-box"><i class="fa-solid fa-bed"></i></div>
+          <div class="spec-info">
+            <h4 data-sr="2 Spavaće Sobe" data-en="2 Bedrooms">2 Spavaće Sobe</h4>
+            <p data-sr="Francuski ležaji + singl kreveti" data-en="King beds + single beds">Francuski ležaji + singl</p>
+          </div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon-box"><i class="fa-solid fa-couch"></i></div>
+          <div class="spec-info">
+            <h4 data-sr="1 Dnevna Soba" data-en="1 Living Room">1 Dnevna Soba</h4>
+            <p data-sr="Prostrana sa TV-om & garniturom" data-en="Spacious with TV & lounge">Prostrana sa garniturom</p>
+          </div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon-box"><i class="fa-solid fa-utensils"></i></div>
+          <div class="spec-info">
+            <h4 data-sr="Komplet Kuhinja" data-en="Full Kitchen">Komplet Kuhinja</h4>
+            <p data-sr="Šporet, rerna, frižider, posuđe" data-en="Stove, oven, fridge, cookware">Šporet, rerna, frižider</p>
+          </div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon-box"><i class="fa-solid fa-water"></i></div>
+          <div class="spec-info">
+            <h4 data-sr="Letnjikovac & Reka" data-en="Gazebo & River">Letnjikovac & Reka</h4>
+            <p data-sr="Privatno dvorište uz reku Kamešinu" data-en="Private yard on Kamešina river">Privatno dvorište uz reku</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- O Apartmanu Section -->
+  <section class="section-padding" id="o-apartmanu">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <div class="experience-badge">
+            <div class="num">100%</div>
+            <div class="label" data-sr="Priroda & Mir" data-en="Nature & Peace">Priroda & Mir</div>
+          </div>
+          <img src="sumskatajna slike/kuca2.jpg" alt="Eksterijer kuće" class="about-img-main">
+          <img src="sumskatajna slike/letnjikovac.jpg" alt="Letnjikovac pored reke" class="about-img-sub">
+        </div>
+
+        <div class="about-text">
+          <span class="subtitle" data-sr="Dobrodošli u Mokru Goru" data-en="Welcome to Mokra Gora">Dobrodošli u Mokru Goru</span>
+          <h2 class="section-title" data-sr="Apartman Šumska Tajna – Spoj komfora i planinske svežine" data-en="Apartment Šumska Tajna – Blending comfort with mountain air">
+            Apartman Šumska Tajna – Spoj komfora i planinske svežine
+          </h2>
+          <p data-sr="Smešten u srce Parka prirode Mokra Gora, naš zasebni planinski objekt nudi savršeno utočište na samo 400 metara od čuvene Šarganske Osmice i 800 metara od etno-sela Drvengrad." data-en="Located in the heart of Mokra Gora Nature Park, our detached mountain chalet offers a peaceful sanctuary just 400 meters from Šarganska Osmica and 800 meters from Drvengrad.">
+            Smešten u srce Parka prirode Mokra Gora, naš zasebni planinski objekt nudi savršeno utočište na samo <strong>400m od Šarganske Osmice</strong> i <strong>800m od etno-sela Drvengrad</strong>.
+          </p>
+          <p data-sr="Kuća raspolaže sa dve udobne spavaće sobe, kupatilom sa tuš kabinom i veš mašinom, prostranom dnevnom sobom sa trpezarijom i kompletno opremljenom kuhinjom. Posebna čar našeg smeštaja je letnjikovac i dvorište uz samu reku Kamešinu sa privatnom plažom i roštiljem." data-en="Features two cozy bedrooms, bathroom with washing machine, spacious living room, fully equipped kitchen, and a private gazebo right on the Kamešina river with grill area.">
+            Kuća raspolaže sa dve udobne spavaće sobe, kupatilom sa tuš kabinom i veš mašinom, prostranom dnevnom sobom i opremljenom kuhinjom. Posebna čar je letnjikovac uz samu reku Kamešinu.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> <span data-sr="Besplatan Wi-Fi & Privatni Parking" data-en="Free Wi-Fi & Private Parking">Besplatan Wi-Fi & Parking</span></div>
+            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> <span data-sr="Roštilj & Letnjikovac" data-en="BBQ & Private Gazebo">Roštilj & Letnjikovac</span></div>
+            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> <span data-sr="Privatni prilaz reci Kamešini" data-en="Kamešina river access">Reka Kamešina u dvorištu</span></div>
+            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> <span data-sr="Norveški radijatori & Peć" data-en="Heating & Wood stove">Grejanje & Peć na drva</span></div>
+          </div>
+
+          <div class="about-cta-box">
+            <a href="tel:0605210322" class="btn-primary">
+              <i class="fa-solid fa-phone"></i> Pozovite: 060 521 0322
+            </a>
+            <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-outline">
+              <i class="fa-solid fa-hotel"></i> Booking.com Profil
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prostorije (Rooms Tab Showcase) -->
+  <section class="section-padding rooms-section" id="prostorije">
+    <div class="container">
+      <div class="text-center">
+        <span class="subtitle" data-sr="Struktura Smeštaja" data-en="Accommodation Details">Struktura Smeštaja</span>
+        <h2 class="section-title" data-sr="Otkrijte svaki kutak Šumske Tajne" data-en="Discover every corner of Šumska Tajna">Otkrijte svaki kutak Šumske Tajne</h2>
+        <p class="section-desc" data-sr="Kliknite na prostorije ispod da biste videli detaljne slike i sadržaje koji vas očekuju." data-en="Click on the spaces below to explore detailed pictures and features awaiting you.">
+          Kliknite na prostorije ispod da biste videli detaljne slike i sadržaje koji vas očekuju.
+        </p>
+      </div>
+
+      <!-- Tabs Navigation -->
+      <div class="tabs-header">
+        <button class="tab-btn active" onclick="switchRoomTab('dnevna')">Dnevna Soba</button>
+        <button class="tab-btn" onclick="switchRoomTab('soba1')">Spavaća Soba 1</button>
+        <button class="tab-btn" onclick="switchRoomTab('soba2')">Spavaća Soba 2</button>
+        <button class="tab-btn" onclick="switchRoomTab('kuhinja')">Kuhinja & Trpezarija</button>
+        <button class="tab-btn" onclick="switchRoomTab('kupatilo')">Kupatilo</button>
+        <button class="tab-btn" onclick="switchRoomTab('letnjikovac')">Letnjikovac & Reka</button>
+      </div>
+
+      <!-- Dnevna Soba Pane -->
+      <div class="room-pane active" id="pane-dnevna">
+        <div class="room-gallery">
+          <div class="room-gallery-main">
+            <img src="sumskatajna slike/dnevna1.jpg" alt="Dnevna Soba" id="mainImg-dnevna">
+          </div>
+          <div class="room-thumbnails">
+            <img src="sumskatajna slike/dnevna1.jpg" class="thumb active" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna1.jpg', this)">
+            <img src="sumskatajna slike/dnevna2.jpg" class="thumb" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna2.jpg', this)">
+            <img src="sumskatajna slike/dnevna3.jpg" class="thumb" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna3.jpg', this)">
+            <img src="sumskatajna slike/dnevna4.jpg" class="thumb" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna4.jpg', this)">
+          </div>
+        </div>
+        <div class="room-details">
+          <span class="room-tag">Dnevni Boravak</span>
+          <h3>Prostrana Dnevna Soba</h3>
+          <p>Udoban i svetao dnevni boravak opremljen modernom ugaonom garniturom, TV-om sa kablovskim kanalima i toplim drvenim detaljima za opuštanje nakon planinskih šetnji.</p>
+          <div class="room-features-grid">
+            <div class="rf-item"><i class="fa-solid fa-tv"></i> Cable Flat-screen TV</div>
+            <div class="rf-item"><i class="fa-solid fa-couch"></i> Udobna ugaona garnitura</div>
+            <div class="rf-item"><i class="fa-solid fa-wifi"></i> Besplatan brzi Wi-Fi</div>
+            <div class="rf-item"><i class="fa-solid fa-fire"></i> Peć na drva & radijatori</div>
+          </div>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+        </div>
+      </div>
+
+      <!-- Spavaća Soba 1 Pane -->
+      <div class="room-pane" id="pane-soba1">
+        <div class="room-gallery">
+          <div class="room-gallery-main">
+            <img src="sumskatajna slike/soba1(2).jpg" alt="Spavaća soba 1" id="mainImg-soba1">
+          </div>
+          <div class="room-thumbnails">
+            <img src="sumskatajna slike/soba1(2).jpg" class="thumb active" onclick="changeMainImg('soba1', 'sumskatajna slike/soba1(2).jpg', this)">
+            <img src="sumskatajna slike/soba1(3).jpg" class="thumb" onclick="changeMainImg('soba1', 'sumskatajna slike/soba1(3).jpg', this)">
+            <img src="sumskatajna slike/soba1(4).jpg" class="thumb" onclick="changeMainImg('soba1', 'sumskatajna slike/soba1(4).jpg', this)">
+            <img src="sumskatajna slike/soba1.jpg" class="thumb" onclick="changeMainImg('soba1', 'sumskatajna slike/soba1.jpg', this)">
+          </div>
+        </div>
+        <div class="room-details">
+          <span class="room-tag">Glavna Soba</span>
+          <h3>Spavaća Soba 1</h3>
+          <p>Udoban bračni francuski ležaj sa kvalitetnom posteljinom i ormarom za odlaganje stvari. Mirna atmosfera pruža savršen san u svežini Mokre Gore.</p>
+          <div class="room-features-grid">
+            <div class="rf-item"><i class="fa-solid fa-bed"></i> Francuski bračni ležaj</div>
+            <div class="rf-item"><i class="fa-solid fa-shirt"></i> Prostran ormar</div>
+            <div class="rf-item"><i class="fa-solid fa-mattress-pillow"></i> Obezbeđeni peškiri & posteljina</div>
+            <div class="rf-item"><i class="fa-solid fa-window-maximize"></i> Mreža za komarce</div>
+          </div>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+        </div>
+      </div>
+
+      <!-- Spavaća Soba 2 Pane -->
+      <div class="room-pane" id="pane-soba2">
+        <div class="room-gallery">
+          <div class="room-gallery-main">
+            <img src="sumskatajna slike/soba2(1).jpg" alt="Spavaća soba 2" id="mainImg-soba2">
+          </div>
+          <div class="room-thumbnails">
+            <img src="sumskatajna slike/soba2(1).jpg" class="thumb active" onclick="changeMainImg('soba2', 'sumskatajna slike/soba2(1).jpg', this)">
+            <img src="sumskatajna slike/soba2(2).jpg" class="thumb" onclick="changeMainImg('soba2', 'sumskatajna slike/soba2(2).jpg', this)">
+            <img src="sumskatajna slike/soba2(3).jpg" class="thumb" onclick="changeMainImg('soba2', 'sumskatajna slike/soba2(3).jpg', this)">
+            <img src="sumskatajna slike/soba2.jpg" class="thumb" onclick="changeMainImg('soba2', 'sumskatajna slike/soba2.jpg', this)">
+          </div>
+        </div>
+        <div class="room-details">
+          <span class="room-tag">Druga Soba</span>
+          <h3>Spavaća Soba 2</h3>
+          <p>Druga spavaća soba pogodna za decu ili dodatne goste, opremljena udobnim ležajevima, toplim tepisima i planinskim ambijentom.</p>
+          <div class="room-features-grid">
+            <div class="rf-item"><i class="fa-solid fa-bed"></i> Udobni ležajevi</div>
+            <div class="rf-item"><i class="fa-solid fa-plug"></i> Utičnice pored kreveta</div>
+            <div class="rf-item"><i class="fa-solid fa-sun"></i> Prirodno svetlo</div>
+            <div class="rf-item"><i class="fa-solid fa-shield-halved"></i> Zvučna izolacija</div>
+          </div>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+        </div>
+      </div>
+
+      <!-- Kuhinja Pane -->
+      <div class="room-pane" id="pane-kuhinja">
+        <div class="room-gallery">
+          <div class="room-gallery-main">
+            <img src="sumskatajna slike/kuhinja.jpg" alt="Kuhinja" id="mainImg-kuhinja">
+          </div>
+          <div class="room-thumbnails">
+            <img src="sumskatajna slike/kuhinja.jpg" class="thumb active" onclick="changeMainImg('kuhinja', 'sumskatajna slike/kuhinja.jpg', this)">
+            <img src="sumskatajna slike/kuhinja2.jpg" class="thumb" onclick="changeMainImg('kuhinja', 'sumskatajna slike/kuhinja2.jpg', this)">
+            <img src="sumskatajna slike/kuhinja3.jpg" class="thumb" onclick="changeMainImg('kuhinja', 'sumskatajna slike/kuhinja3.jpg', this)">
+          </div>
+        </div>
+        <div class="room-details">
+          <span class="room-tag">Kulinarski Kutak</span>
+          <h3>Potpuno Opremljena Kuhinja</h3>
+          <p>Moderna kuhinja sa šporetom, rernom, frižiderom, posuđem, priborom za jelo i trpezarijskim stolom, idealna za pripremu ukusnih jela tokom boravka.</p>
+          <div class="room-features-grid">
+            <div class="rf-item"><i class="fa-solid fa-fire-burner"></i> Šporet sa rernom</div>
+            <div class="rf-item"><i class="fa-solid fa-snowflake"></i> Frižider</div>
+            <div class="rf-item"><i class="fa-solid fa-kitchen-set"></i> Kompletan pribor & posuđe</div>
+            <div class="rf-item"><i class="fa-solid fa-chair"></i> Trpezarijski sto</div>
+          </div>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+        </div>
+      </div>
+
+      <!-- Kupatilo Pane -->
+      <div class="room-pane" id="pane-kupatilo">
+        <div class="room-gallery">
+          <div class="room-gallery-main">
+            <img src="sumskatajna slike/kupatilo.jpg" alt="Kupatilo" id="mainImg-kupatilo">
+          </div>
+          <div class="room-thumbnails">
+            <img src="sumskatajna slike/kupatilo.jpg" class="thumb active" onclick="changeMainImg('kupatilo', 'sumskatajna slike/kupatilo.jpg', this)">
+            <img src="sumskatajna slike/kupatilo2.jpg" class="thumb" onclick="changeMainImg('kupatilo', 'sumskatajna slike/kupatilo2.jpg', this)">
+            <img src="sumskatajna slike/kupatilo3.jpg" class="thumb" onclick="changeMainImg('kupatilo', 'sumskatajna slike/kupatilo3.jpg', this)">
+            <img src="sumskatajna slike/kupatilo4.jpg" class="thumb" onclick="changeMainImg('kupatilo', 'sumskatajna slike/kupatilo4.jpg', this)">
+          </div>
+        </div>
+        <div class="room-details">
+          <span class="room-tag">Higijena & Komfor</span>
+          <h3>Moderno Kupatilo sa Veš Mašinom</h3>
+          <p>Čisto i moderno kupatilo sa tuš kabinom, veš mašinom za pranje veša, fenom za kosu, svežim peškirima i toaletnim priborom.</p>
+          <div class="room-features-grid">
+            <div class="rf-item"><i class="fa-solid fa-shower"></i> Tuš kabina</div>
+            <div class="rf-item"><i class="fa-solid fa-soap"></i> Veš mašina</div>
+            <div class="rf-item"><i class="fa-solid fa-wind"></i> Fen za kosu</div>
+            <div class="rf-item"><i class="fa-solid fa-hot-tub-person"></i> Topla voda 24/7</div>
+          </div>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+        </div>
+      </div>
+
+      <!-- Letnjikovac & Reka Pane -->
+      <div class="room-pane" id="pane-letnjikovac">
+        <div class="room-gallery">
+          <div class="room-gallery-main">
+            <img src="sumskatajna slike/letnjikovac.jpg" alt="Letnjikovac" id="mainImg-letnjikovac">
+          </div>
+          <div class="room-thumbnails">
+            <img src="sumskatajna slike/letnjikovac.jpg" class="thumb active" onclick="changeMainImg('letnjikovac', 'sumskatajna slike/letnjikovac.jpg', this)">
+            <img src="sumskatajna slike/letnjikovac2.jpg" class="thumb" onclick="changeMainImg('letnjikovac', 'sumskatajna slike/letnjikovac2.jpg', this)">
+            <img src="sumskatajna slike/reka.jpg" class="thumb" onclick="changeMainImg('letnjikovac', 'sumskatajna slike/reka.jpg', this)">
+            <img src="sumskatajna slike/reka2.jpg" class="thumb" onclick="changeMainImg('letnjikovac', 'sumskatajna slike/reka2.jpg', this)">
+          </div>
+        </div>
+        <div class="room-details">
+          <span class="room-tag">Eksterijer & Reka</span>
+          <h3>Dvorište uz Reku Kamešinu sa Letnjikovcem</h3>
+          <p>Jedinstveni letnjikovac opremljen stolom i klupama odmah pored šumovite reke Kamešine. Uživajte u jutarnjoj kafi ili roštiljanju uz žubor vode.</p>
+          <div class="room-features-grid">
+            <div class="rf-item"><i class="fa-solid fa-water"></i> Reka Kamešina u dvorištu</div>
+            <div class="rf-item"><i class="fa-solid fa-umbrella-beach"></i> Nadstrešnica & garnitura</div>
+            <div class="rf-item"><i class="fa-solid fa-fire"></i> Betonirani roštilj</div>
+            <div class="rf-item"><i class="fa-solid fa-tree"></i> Privatna plaža kraj reke</div>
+          </div>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Clean Photo Gallery Section (Filters removed as requested) -->
+  <section class="section-padding" id="galerija">
+    <div class="container">
+      <div class="text-center">
+        <span class="subtitle" data-sr="Foto Galerija" data-en="Photo Gallery">Foto Galerija</span>
+        <h2 class="section-title" data-sr="Fotografije Apartmana Šumska Tajna" data-en="Photos of Apartment Šumska Tajna">Fotografije Apartmana Šumska Tajna</h2>
+        <p class="section-desc" data-sr="Kliknite na bilo koju sliku za prikaz u punoj rezoluciji." data-en="Click on any photo to view in high resolution.">
+          Kliknite na bilo koju sliku za prikaz u punoj rezoluciji.
+        </p>
+      </div>
+
+      <!-- Streamlined Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid" style="margin-top: 2.5rem;">
+        <div class="gallery-card" onclick="openLightbox(0)">
+          <img src="sumskatajna slike/kuca.jpg" alt="Eksterijer">
+          <div class="gallery-card-overlay">
+            <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-card-title">Kuća Šumska Tajna</div>
+            <div class="gallery-card-cat">Eksterijer kuća</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(1)">
+          <img src="sumskatajna slike/dnevna1.jpg" alt="Dnevna Soba">
+          <div class="gallery-card-overlay">
+            <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-card-title">Prostrani Dnevni Boravak</div>
+            <div class="gallery-card-cat">Dnevna Soba</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(2)">
+          <img src="sumskatajna slike/soba1.jpg" alt="Spavaća Soba 1">
+          <div class="gallery-card-overlay">
+            <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-card-title">Glavna Spavaća Soba</div>
+            <div class="gallery-card-cat">Bračni Ležaj</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(3)">
+          <img src="sumskatajna slike/soba2.jpg" alt="Spavaća Soba 2">
+          <div class="gallery-card-overlay">
+            <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-card-title">Druga Spavaća Soba</div>
+            <div class="gallery-card-cat">Planinski Ležajevi</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(4)">
+          <img src="sumskatajna slike/kuhinja.jpg" alt="Kuhinja">
+          <div class="gallery-card-overlay">
+            <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-card-title">Kuhinja sa Trpezarijom</div>
+            <div class="gallery-card-cat">Kuhinja</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(5)">
+          <img src="sumskatajna slike/kupatilo.jpg" alt="Kupatilo">
+          <div class="gallery-card-overlay">
+            <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-card-title">Moderno Kupatilo</div>
+            <div class="gallery-card-cat">Kupatilo</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(6)">
+          <img src="sumskatajna slike/letnjikovac.jpg" alt="Letnjikovac">
+          <div class="gallery-card-overlay">
+            <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-card-title">Letnjikovac u Dvorištu</div>
+            <div class="gallery-card-cat">Dvorište</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(7)">
+          <img src="sumskatajna slike/reka.jpg" alt="Reka Kamešina">
+          <div class="gallery-card-overlay">
+            <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-card-title">Reka Kamešina pored Kuće</div>
+            <div class="gallery-card-cat">Reka & Priroda</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(8)">
+          <img src="sumskatajna slike/stepenice.jpg" alt="Stepenište">
+          <div class="gallery-card-overlay">
+            <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-card-title">Drveno Stepenište</div>
+            <div class="gallery-card-cat">Enterijer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accurate Distances & Mokra Gora Sights (from Booking.com) -->
+  <section class="section-padding" id="atrakcije">
+    <div class="container">
+      <div class="text-center">
+        <span class="subtitle" data-sr="Udaljenosti i Lokacija" data-en="Distances & Location">Udaljenosti i Lokacija</span>
+        <h2 class="section-title" data-sr="Atrakcije i Lokalne Udaljenosti" data-en="Attractions & Distances">Atrakcije i Lokalne Udaljenosti</h2>
+        <p class="section-desc" data-sr="Tačne udaljenosti od Apartmana Šumska Tajna do glavnih znamenitosti i planinskih lokaliteta." data-en="Exact distances from Apartment Šumska Tajna to top landmarks and mountain destinations.">
+          Tačne udaljenosti od Apartmana Šumska Tajna do glavnih znamenitosti i planinskih lokaliteta.
+        </p>
+      </div>
+
+      <div class="sights-grid">
+        <div class="sight-card">
+          <div class="sight-img">
+            <img src="sumskatajna slike/osmica.jpg" alt="Šarganska Osmica">
+          </div>
+          <div class="sight-content">
+            <h4>Šarganska Osmica</h4>
+            <p>Čuvena uska pruga i vožnja vozom "Ćira" kroz bajkovite planinske usjeke.</p>
+            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> Samo 400m od apartmana</span>
+          </div>
+        </div>
+
+        <div class="sight-card">
+          <div class="sight-img">
+            <img src="sumskatajna slike/drvengrad.jpg" alt="Drvengrad Mećavnik">
+          </div>
+          <div class="sight-content">
+            <h4>Drvengrad (Mećavnik)</h4>
+            <p>Etno selo režisera Emira Kusturice sa autentičnim drvenim građevinama i bioskopom.</p>
+            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> Samo 800m od apartmana</span>
+          </div>
+        </div>
+
+        <div class="sight-card">
+          <div class="sight-img">
+            <img src="sumskatajna slike/bele vode.jpg" alt="Bela Voda">
+          </div>
+          <div class="sight-content">
+            <h4>Lekoviti Izvor "Bela Voda"</h4>
+            <p>Čuveni prirodni izvor visoko-alkalne vode u neposrednoj blizini.</p>
+            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> U neposrednoj blizini</span>
+          </div>
+        </div>
+
+        <div class="sight-card">
+          <div class="sight-img">
+            <img src="sumskatajna slike/iver.jpg" alt="Ski centar Iver">
+          </div>
+          <div class="sight-content">
+            <h4>Ski Centar Iver</h4>
+            <p>Uređene skijaške staze i žičare na planini Tara za zimske radosti.</p>
+            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> 10 km od apartmana</span>
+          </div>
+        </div>
+
+        <div class="sight-card">
+          <div class="sight-img">
+            <img src="sumskatajna slike/tara.jpg" alt="Nacionalni Park Tara">
+          </div>
+          <div class="sight-content">
+            <h4>Nacionalni Park Tara</h4>
+            <p>Guste crnogorične šume, vidikovci (Banjska Stena) i Zaovinsko jezero.</p>
+            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> 20 km od apartmana</span>
+          </div>
+        </div>
+
+        <div class="sight-card">
+          <div class="sight-img">
+            <img src="sumskatajna slike/andricgrad.jpg" alt="Andrićgrad Višegrad">
+          </div>
+          <div class="sight-content">
+            <h4>Andrićgrad & Višegrad</h4>
+            <p>Kamen grad na ušću Rzava u Drinu i čuveni most Mehmed-paše Sokolovića.</p>
+            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> 25 km od apartmana</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accurate House Rules (Kućni Red from Booking.com) -->
+  <section class="section-padding rules-section" id="kucni-red">
+    <div class="container">
+      <div class="text-center">
+        <span class="subtitle" data-sr="Pravila Objekta" data-en="House Rules">Pravila Objekta</span>
+        <h2 class="section-title" data-sr="Kućni Red & Informacije o Boravku" data-en="House Rules & Stay Info">Kućni Red & Informacije o Boravku</h2>
+        <p class="section-desc" data-sr="Zvanična pravila i uslovi boravka prema Booking.com profilu." data-en="Official rules and conditions according to Booking.com.">
+          Zvanična pravila i uslovi boravka prema našem zvaničnom Booking.com profilu.
+        </p>
+      </div>
+
+      <div class="rules-grid">
+        <div class="rule-card">
+          <div class="rule-icon"><i class="fa-solid fa-clock"></i></div>
+          <div class="rule-content">
+            <h4>Prijava (Check-in)</h4>
+            <p class="rule-highlight">14:00 - 20:00h</p>
+            <p>Gosti su dužni da obaveste objekat o vremenu dolaska.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
+          <div class="rule-content">
+            <h4>Odjava (Check-out)</h4>
+            <p class="rule-highlight">08:00 - 10:00h</p>
+            <p>Molimo vas da napustite prostorije u navedenom roku.</p>
+          </div>
+        </div>
+
+        <div class="rule-card rule-card-negative">
+          <div class="rule-icon"><i class="fa-solid fa-paw"></i></div>
+          <div class="rule-content">
+            <h4>Kućni Ljubimci</h4>
+            <p class="rule-highlight rule-no">Nisu dozvoljeni</p>
+            <p>Boravak kućnih ljubimaca u objektu nije dozvoljen.</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Rezervacija CTA Section -->
+  <section class="section-padding booking-section" id="rezervacija">
+    <div class="container">
+      <div class="booking-cta-center">
+        <span class="subtitle" style="color: var(--accent-gold);">Rezervišite Vaš Boravak</span>
+        <h2 style="color: #FAF7F2; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.2rem;">Brza i jednostavna rezervacija</h2>
+        <p style="color: #D4C7BC; font-size: 1.1rem; max-width: 600px; margin: 0 auto 2.5rem auto;">
+          Apartman je dostupan za rezervaciju direktno putem Booking.com profila ili pozivom vlasnika.
+        </p>
+        <div class="booking-cta-btns">
+          <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-booking-hero">
+            <i class="fa-solid fa-hotel"></i> Rezervišite na Booking
+          </a>
+          <a href="tel:0605210322" class="btn-primary" style="background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.4); color: #FFF;">
+            <i class="fa-solid fa-phone"></i> Pozovite: 060 521 0322
+          </a>
+        </div>
+        <div class="booking-perks-row">
+          <div class="booking-perk">
+            <i class="fa-solid fa-wifi"></i>
+            <span>Besplatan Wi-Fi</span>
+          </div>
+          <div class="booking-perk">
+            <i class="fa-solid fa-square-parking"></i>
+            <span>Besplatan Parking</span>
+          </div>
+          <div class="booking-perk">
+            <i class="fa-solid fa-fire"></i>
+            <span>Grejanje</span>
+          </div>
+          <div class="booking-perk">
+            <i class="fa-solid fa-money-bill"></i>
+            <span>Plaćanje gotovinom</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guest Reviews -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center">
+        <span class="subtitle" data-sr="Utisci Gostiju" data-en="Guest Reviews">Utisci Gostiju</span>
+        <h2 class="section-title" data-sr="Šta naši gosti kažu o nama" data-en="What our guests say about us">Šta naši gosti kažu o nama</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Prelep apartman, sve je bilo izuzetno čisto i mirišljavo! Letnjikovac pored reke Kamešine je savršeno mesto za opuštanje. Šarganska Osmica na svega 4 minuta šetnje!"</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">M</div>
+            <div class="reviewer-details">
+              <h5>Marko i Ana</h5>
+              <span>Beograd, Srbija</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Lokacija u Mokroj Gori je fantastična, 800m od Drvengrada. Dve spavaće sobe daju prekopotrebnu komociju za porodicu sa decom."</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">S</div>
+            <div class="reviewer-details">
+              <h5>Stefan V.</h5>
+              <span>Novi Sad, Srbija</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Sve preporuke za Šumsku Tajnu! Kuhinja je kompletno opremljena sa veš mašinom u kupatilu, a žubor reke je neprocenjiv."</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">E</div>
+            <div class="reviewer-details">
+              <h5>Elena & Thomas</h5>
+              <span>Vienna, Austria</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Map Section -->
+  <section class="section-padding contact-section" id="kontakt">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="subtitle" data-sr="Kontaktirajte Nas" data-en="Contact Us">Kontaktirajte Nas</span>
+          <h2 class="section-title" data-sr="Stojimo vam na raspolaganju" data-en="We are at your service">Stojimo vam na raspolaganju</h2>
+          <p class="section-desc" style="margin-left: 0; margin-bottom: 2rem;" data-sr="Imate pitanje ili želite rezervaciju? Pozovite nas direktno ili posetite naše zvanične naloge." data-en="Have a question or want to book? Call us directly or visit our official accounts.">
+            Imate pitanje ili želite rezervaciju? Pozovite nas direktno ili posetite naše zvanične naloge.
+          </p>
+
+          <div class="contact-info-boxes">
+            <div class="contact-box">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-text">
+                <h4>Telefon za Rezervacije</h4>
+                <p><a href="tel:0605210322" style="font-weight: 700; font-size: 1.1rem; color: var(--accent-deep-brown);">060 521 0322</a></p>
+              </div>
+            </div>
+
+            <div class="contact-box">
+              <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div class="contact-text">
+                <h4>Instagram Profil</h4>
+                <p><a href="https://www.instagram.com/sumska_tajna" target="_blank" style="font-weight: 600; color: var(--accent-gold);">@sumska_tajna</a></p>
+              </div>
+            </div>
+
+            <div class="contact-box">
+              <div class="contact-icon"><i class="fa-solid fa-hotel"></i></div>
+              <div class="contact-text">
+                <h4>Booking</h4>
+                <p><a href="https://www.booking.com/Share-KlwrjL" target="_blank" style="font-weight: 600; color: var(--accent-gold);">Rezervišite na Booking</a></p>
+              </div>
+            </div>
+
+            <div class="contact-box">
+              <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <div class="contact-text">
+                <h4>Google Lokacija</h4>
+                <p><a href="https://share.google/IUHPS22cQDJgFpj1d" target="_blank" style="font-weight: 600; color: var(--accent-gold);">Otvorite na Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe title="Mapa Mokra Gora" src="https://maps.google.com/maps?q=Mokra%20Gora&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <img src="sumskatajna slike/logo.jpg" alt="Apartman Šumska Tajna Logo" class="brand-logo-img">
+            <div class="brand-text">ŠUMSKA <span>TAJNA</span></div>
+          </div>
+          <p>Zasebna planinska kuća u Mokroj Gori. 400m od Šarganske Osmice, 800m od Drvengrada.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigacija</h4>
+          <div class="footer-links">
+            <a href="#pocetna">Početna</a>
+            <a href="#o-apartmanu">O Apartmanu</a>
+            <a href="#prostorije">Prostorije</a>
+            <a href="#galerija">Galerija</a>
+            <a href="#kucni-red">Kućni Red</a>
+            <a href="#rezervacija">Cene & Rezervacija</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt & Linkovi</h4>
+          <div class="footer-links">
+            <a href="tel:0605210322"><i class="fa-solid fa-phone"></i> 060 521 0322</a>
+            <a href="https://www.instagram.com/sumska_tajna" target="_blank"><i class="fa-brands fa-instagram"></i> @sumska_tajna</a>
+            <a href="https://www.booking.com/Share-KlwrjL" target="_blank"><i class="fa-solid fa-hotel"></i> Booking</a>
+            <a href="https://share.google/IUHPS22cQDJgFpj1d" target="_blank"><i class="fa-solid fa-map-pin"></i> Google Maps</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Lokacija</h4>
+          <p>Mokra Gora, Zlatiborski okrug<br>Republika Srbija</p>
+          <p style="margin-top: 1rem; color: var(--accent-gold);"><i class="fa-solid fa-phone"></i> Direct Call: 060 521 0322</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Apartman Šumska Tajna Mokra Gora. Sva prava zadržana.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Buttons -->
+  <div class="floating-actions">
+    <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="float-btn float-booking" aria-label="Booking.com" title="Booking.com">
+      <i class="fa-solid fa-hotel"></i>
+    </a>
+    <a href="https://wa.me/381605210322?text=Zdravo,%20interesuje%20me%20rezervacija%20apartmana%20Šumska%20Tajna" target="_blank" class="float-btn float-wa" aria-label="WhatsApp" title="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="tel:0605210322" class="float-btn float-phone" aria-label="Pozovite 060 521 0322" title="Pozovite 060 521 0322">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-prev" onclick="changeLightboxImg(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lightbox-next" onclick="changeLightboxImg(1)"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastText">Upit uspešno poslat!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
