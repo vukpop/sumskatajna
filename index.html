@@ -6,11 +6,28 @@
   <title>Apartman Šumska Tajna | Mokra Gora - Luksuzni Smeštaj u Prirodi</title>
   <meta name="description" content="Apartman Šumska Tajna u Mokroj Gori. Komforan smeštaj sa 2 spavaće sobe, dnevnim boravkom, opremljenom kuhinjom, kupatilom i letnjikovcem pored reke Kamešine. 400m od Šarganske Osmice.">
   
+  <!-- Preconnect & Preload for High Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Critical Hero Image Preload -->
+  <link rel="preload" as="image" href="sumskatajna slike/kuca.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="sumskatajna slike/logo.jpg">
+
+  <!-- Open Graph / Meta for Social Media & Web Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Apartman Šumska Tajna | Mokra Gora - Luksuzni Smeštaj u Prirodi">
+  <meta property="og:description" content="Zasebna planinska kuća sa 2 spavaće sobe, dnevnim boravkom, opremljenom kuhinjom, kupatilom i privatnim letnjikovcem pored reke Kamešine. 400m od Šarganske Osmice.">
+  <meta property="og:image" content="sumskatajna slike/kuca.jpg">
+  <meta property="og:url" content="https://sumskatajna.rs">
+
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="styles.css">
   
   <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
 
@@ -56,7 +73,7 @@
   <!-- Hero Section -->
   <section class="hero" id="pocetna">
     <div class="hero-bg">
-      <img src="sumskatajna slike/kuca.jpg" alt="Apartman Šumska Tajna Mokra Gora Exterior">
+      <img src="sumskatajna slike/kuca.jpg" alt="Apartman Šumska Tajna Mokra Gora Exterior" fetchpriority="high" decoding="async">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -144,8 +161,8 @@
             <div class="num">100%</div>
             <div class="label" data-sr="Priroda & Mir" data-en="Nature & Peace">Priroda & Mir</div>
           </div>
-          <img src="sumskatajna slike/kuca2.jpg" alt="Eksterijer kuće" class="about-img-main">
-          <img src="sumskatajna slike/letnjikovac.jpg" alt="Letnjikovac pored reke" class="about-img-sub">
+          <img src="sumskatajna slike/kuca2.jpg" alt="Eksterijer kuće" class="about-img-main" loading="lazy" decoding="async">
+          <img src="sumskatajna slike/letnjikovac.jpg" alt="Letnjikovac pored reke" class="about-img-sub" loading="lazy" decoding="async">
         </div>
 
         <div class="about-text">
@@ -193,25 +210,25 @@
 
       <!-- Tabs Navigation -->
       <div class="tabs-header">
-        <button class="tab-btn active" onclick="switchRoomTab('dnevna')">Dnevna Soba</button>
-        <button class="tab-btn" onclick="switchRoomTab('soba1')">Spavaća Soba 1</button>
-        <button class="tab-btn" onclick="switchRoomTab('soba2')">Spavaća Soba 2</button>
-        <button class="tab-btn" onclick="switchRoomTab('kuhinja')">Kuhinja & Trpezarija</button>
-        <button class="tab-btn" onclick="switchRoomTab('kupatilo')">Kupatilo</button>
-        <button class="tab-btn" onclick="switchRoomTab('letnjikovac')">Letnjikovac & Reka</button>
+        <button class="tab-btn active" onclick="switchRoomTab('dnevna', this)">Dnevna Soba</button>
+        <button class="tab-btn" onclick="switchRoomTab('soba1', this)">Spavaća Soba 1</button>
+        <button class="tab-btn" onclick="switchRoomTab('soba2', this)">Spavaća Soba 2</button>
+        <button class="tab-btn" onclick="switchRoomTab('kuhinja', this)">Kuhinja & Trpezarija</button>
+        <button class="tab-btn" onclick="switchRoomTab('kupatilo', this)">Kupatilo</button>
+        <button class="tab-btn" onclick="switchRoomTab('letnjikovac', this)">Letnjikovac & Reka</button>
       </div>
 
       <!-- Dnevna Soba Pane -->
       <div class="room-pane active" id="pane-dnevna">
         <div class="room-gallery">
           <div class="room-gallery-main">
-            <img src="sumskatajna slike/dnevna1.jpg" alt="Dnevna Soba" id="mainImg-dnevna">
+            <img src="sumskatajna slike/dnevna1.jpg" alt="Dnevna Soba" id="mainImg-dnevna" loading="lazy" decoding="async">
           </div>
           <div class="room-thumbnails">
-            <img src="sumskatajna slike/dnevna1.jpg" class="thumb active" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna1.jpg', this)">
-            <img src="sumskatajna slike/dnevna2.jpg" class="thumb" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna2.jpg', this)">
-            <img src="sumskatajna slike/dnevna3.jpg" class="thumb" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna3.jpg', this)">
-            <img src="sumskatajna slike/dnevna4.jpg" class="thumb" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna4.jpg', this)">
+            <img src="sumskatajna slike/dnevna1.jpg" class="thumb active" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna1.jpg', this)" loading="lazy">
+            <img src="sumskatajna slike/dnevna2.jpg" class="thumb" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna2.jpg', this)" loading="lazy">
+            <img src="sumskatajna slike/dnevna3.jpg" class="thumb" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna3.jpg', this)" loading="lazy">
+            <img src="sumskatajna slike/dnevna4.jpg" class="thumb" onclick="changeMainImg('dnevna', 'sumskatajna slike/dnevna4.jpg', this)" loading="lazy">
           </div>
         </div>
         <div class="room-details">
@@ -232,24 +249,22 @@
       <div class="room-pane" id="pane-soba1">
         <div class="room-gallery">
           <div class="room-gallery-main">
-            <img src="sumskatajna slike/soba1(2).jpg" alt="Spavaća soba 1" id="mainImg-soba1">
+            <img src="sumskatajna slike/soba1(1).jpg" alt="Spavaća soba 1" id="mainImg-soba1">
           </div>
           <div class="room-thumbnails">
-            <img src="sumskatajna slike/soba1(2).jpg" class="thumb active" onclick="changeMainImg('soba1', 'sumskatajna slike/soba1(2).jpg', this)">
-            <img src="sumskatajna slike/soba1(3).jpg" class="thumb" onclick="changeMainImg('soba1', 'sumskatajna slike/soba1(3).jpg', this)">
-            <img src="sumskatajna slike/soba1(4).jpg" class="thumb" onclick="changeMainImg('soba1', 'sumskatajna slike/soba1(4).jpg', this)">
-            <img src="sumskatajna slike/soba1.jpg" class="thumb" onclick="changeMainImg('soba1', 'sumskatajna slike/soba1.jpg', this)">
+            <img src="sumskatajna slike/soba1(1).jpg" class="thumb active" onclick="changeMainImg('soba1', 'sumskatajna slike/soba1(1).jpg', this)">
+            <img src="sumskatajna slike/soba1(2).jpg" class="thumb" onclick="changeMainImg('soba1', 'sumskatajna slike/soba1(2).jpg', this)">
           </div>
         </div>
         <div class="room-details">
           <span class="room-tag">Glavna Soba</span>
           <h3>Spavaća Soba 1</h3>
-          <p>Udoban bračni francuski ležaj sa kvalitetnom posteljinom i ormarom za odlaganje stvari. Mirna atmosfera pruža savršen san u svežini Mokre Gore.</p>
+          <p>Udoban bračni francuski ležaj sa kvalitetnom posteljinom. Mirna atmosfera pruža savršen san u svežini Mokre Gore.</p>
           <div class="room-features-grid">
             <div class="rf-item"><i class="fa-solid fa-bed"></i> Francuski bračni ležaj</div>
-            <div class="rf-item"><i class="fa-solid fa-shirt"></i> Prostran ormar</div>
             <div class="rf-item"><i class="fa-solid fa-mattress-pillow"></i> Obezbeđeni peškiri & posteljina</div>
             <div class="rf-item"><i class="fa-solid fa-window-maximize"></i> Mreža za komarce</div>
+            <div class="rf-item"><i class="fa-solid fa-plug"></i> Utičnice pored kreveta</div>
           </div>
           <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
         </div>
@@ -264,8 +279,6 @@
           <div class="room-thumbnails">
             <img src="sumskatajna slike/soba2(1).jpg" class="thumb active" onclick="changeMainImg('soba2', 'sumskatajna slike/soba2(1).jpg', this)">
             <img src="sumskatajna slike/soba2(2).jpg" class="thumb" onclick="changeMainImg('soba2', 'sumskatajna slike/soba2(2).jpg', this)">
-            <img src="sumskatajna slike/soba2(3).jpg" class="thumb" onclick="changeMainImg('soba2', 'sumskatajna slike/soba2(3).jpg', this)">
-            <img src="sumskatajna slike/soba2.jpg" class="thumb" onclick="changeMainImg('soba2', 'sumskatajna slike/soba2.jpg', this)">
           </div>
         </div>
         <div class="room-details">
@@ -387,7 +400,7 @@
           </div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox(1)">
+        <div class="gallery-card" onclick="openLightbox(4)">
           <img src="sumskatajna slike/dnevna1.jpg" alt="Dnevna Soba">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
@@ -396,8 +409,8 @@
           </div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox(2)">
-          <img src="sumskatajna slike/soba1.jpg" alt="Spavaća Soba 1">
+        <div class="gallery-card" onclick="openLightbox(10)">
+          <img src="sumskatajna slike/soba1(1).jpg" alt="Spavaća Soba 1">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
             <div class="gallery-card-title">Glavna Spavaća Soba</div>
@@ -405,8 +418,8 @@
           </div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox(3)">
-          <img src="sumskatajna slike/soba2.jpg" alt="Spavaća Soba 2">
+        <div class="gallery-card" onclick="openLightbox(12)">
+          <img src="sumskatajna slike/soba2(1).jpg" alt="Spavaća Soba 2">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
             <div class="gallery-card-title">Druga Spavaća Soba</div>
@@ -414,7 +427,7 @@
           </div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox(4)">
+        <div class="gallery-card" onclick="openLightbox(16)">
           <img src="sumskatajna slike/kuhinja.jpg" alt="Kuhinja">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
@@ -423,7 +436,7 @@
           </div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox(5)">
+        <div class="gallery-card" onclick="openLightbox(19)">
           <img src="sumskatajna slike/kupatilo.jpg" alt="Kupatilo">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
@@ -432,7 +445,7 @@
           </div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox(6)">
+        <div class="gallery-card" onclick="openLightbox(26)">
           <img src="sumskatajna slike/letnjikovac.jpg" alt="Letnjikovac">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
@@ -441,7 +454,7 @@
           </div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox(7)">
+        <div class="gallery-card" onclick="openLightbox(30)">
           <img src="sumskatajna slike/reka.jpg" alt="Reka Kamešina">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
@@ -450,7 +463,7 @@
           </div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox(8)">
+        <div class="gallery-card" onclick="openLightbox(14)">
           <img src="sumskatajna slike/stepenice.jpg" alt="Stepenište">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
@@ -476,7 +489,7 @@
       <div class="sights-grid">
         <div class="sight-card">
           <div class="sight-img">
-            <img src="sumskatajna slike/osmica.jpg" alt="Šarganska Osmica">
+            <img src="sumskatajna slike/osmica.jpg" alt="Šarganska Osmica" loading="lazy" decoding="async">
           </div>
           <div class="sight-content">
             <h4>Šarganska Osmica</h4>
@@ -573,12 +586,12 @@
           </div>
         </div>
 
-        <div class="rule-card rule-card-negative">
+        <div class="rule-card">
           <div class="rule-icon"><i class="fa-solid fa-paw"></i></div>
           <div class="rule-content">
             <h4>Kućni Ljubimci</h4>
-            <p class="rule-highlight rule-no">Nisu dozvoljeni</p>
-            <p>Boravak kućnih ljubimaca u objektu nije dozvoljen.</p>
+            <p class="rule-highlight" style="color: var(--accent-gold);">U dogovoru sa vlasnikom</p>
+            <p>Kućni ljubimci su dobrodošli uz prethodan dogovor sa vlasnikom.</p>
           </div>
         </div>
 
@@ -720,14 +733,14 @@
               <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
               <div class="contact-text">
                 <h4>Google Lokacija</h4>
-                <p><a href="https://share.google/IUHPS22cQDJgFpj1d" target="_blank" style="font-weight: 600; color: var(--accent-gold);">Otvorite na Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                <p><a href="https://share.google/7oTAUpoKocverm9Xw" target="_blank" style="font-weight: 600; color: var(--accent-gold);">Otvorite na Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="map-wrapper">
-          <iframe title="Mapa Mokra Gora" src="https://maps.google.com/maps?q=Mokra%20Gora&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+          <iframe title="Mapa Apartman Šumska Tajna" src="https://maps.google.com/maps?q=Apartman%20Sumska%20Tajna%20Mokra%20Gora&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -763,7 +776,7 @@
             <a href="tel:0605210322"><i class="fa-solid fa-phone"></i> 060 521 0322</a>
             <a href="https://www.instagram.com/sumska_tajna" target="_blank"><i class="fa-brands fa-instagram"></i> @sumska_tajna</a>
             <a href="https://www.booking.com/Share-KlwrjL" target="_blank"><i class="fa-solid fa-hotel"></i> Booking</a>
-            <a href="https://share.google/IUHPS22cQDJgFpj1d" target="_blank"><i class="fa-solid fa-map-pin"></i> Google Maps</a>
+            <a href="https://share.google/7oTAUpoKocverm9Xw" target="_blank"><i class="fa-solid fa-map-pin"></i> Google Maps</a>
           </div>
         </div>
 

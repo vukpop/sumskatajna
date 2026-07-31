@@ -17,15 +17,11 @@ const galleryData = [
   { src: "sumskatajna slike/dnevna5.jpg", title: "Topla atmosfera dnevnog boravka", cat: "dnevna" },
   { src: "sumskatajna slike/dnevna6.jpg", title: "Dnevna soba pogled", cat: "dnevna" },
   
-  { src: "sumskatajna slike/soba1.jpg", title: "Glavna spavaća soba", cat: "sobe" },
+  { src: "sumskatajna slike/soba1(1).jpg", title: "Glavna spavaća soba", cat: "sobe" },
   { src: "sumskatajna slike/soba1(2).jpg", title: "Francuski bračni ležaj", cat: "sobe" },
-  { src: "sumskatajna slike/soba1(3).jpg", title: "Spavaća soba 1 ambient", cat: "sobe" },
-  { src: "sumskatajna slike/soba1(4).jpg", title: "Ormar i rasveta", cat: "sobe" },
   
-  { src: "sumskatajna slike/soba2.jpg", title: "Druga spavaća soba", cat: "sobe" },
-  { src: "sumskatajna slike/soba2(1).jpg", title: "Udobni ležajevi soba 2", cat: "sobe" },
-  { src: "sumskatajna slike/soba2(2).jpg", title: "Planinski stil spavaće sobe", cat: "sobe" },
-  { src: "sumskatajna slike/soba2(3).jpg", title: "Soba 2 detalj", cat: "sobe" },
+  { src: "sumskatajna slike/soba2(1).jpg", title: "Druga spavaća soba", cat: "sobe" },
+  { src: "sumskatajna slike/soba2(2).jpg", title: "Udobni ležajevi soba 2", cat: "sobe" },
 
   { src: "sumskatajna slike/stepenice.jpg", title: "Unutrašnje drveno stepenište", cat: "sobe" },
   { src: "sumskatajna slike/stepenice2.jpg", title: "Stepenište i hodnik", cat: "sobe" },
@@ -94,12 +90,16 @@ function setupMobileMenu() {
 }
 
 // Room Tabs Switcher
-function switchRoomTab(roomKey) {
+function switchRoomTab(roomKey, btnElem) {
   // Update Tab Buttons
   const buttons = document.querySelectorAll('.tabs-header .tab-btn');
   buttons.forEach(btn => btn.classList.remove('active'));
 
-  event.target.classList.add('active');
+  if (btnElem) {
+    btnElem.classList.add('active');
+  } else if (typeof event !== 'undefined' && event && event.currentTarget) {
+    event.currentTarget.classList.add('active');
+  }
 
   // Update Panes
   const panes = document.querySelectorAll('.room-pane');
