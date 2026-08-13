@@ -5,48 +5,48 @@
 
 // All 38 Apartment Images cataloged for Lightbox
 const galleryData = [
-  { src: "sumskatajna slike/kuca.jpg", title: "Apartman Šumska Tajna", cat: "eksterijer" },
-  { src: "sumskatajna slike/kuca2.jpg", title: "Planinska kuća u prirodi", cat: "eksterijer" },
-  { src: "sumskatajna slike/ulaz.jpg", title: "Ulaz u kuću", cat: "eksterijer" },
-  { src: "sumskatajna slike/ulaz1.jpg", title: "Prilaz i terasica", cat: "eksterijer" },
+  { src: "sumskatajna slike/kuca.jpg", title: "Apartman Šumska Tajna", titleEN: "Apartment Šumska Tajna", cat: "eksterijer" },
+  { src: "sumskatajna slike/kuca2.jpg", title: "Planinska kuća u prirodi", titleEN: "Mountain Chalet in Nature", cat: "eksterijer" },
+  { src: "sumskatajna slike/ulaz.jpg", title: "Ulaz u kuću", titleEN: "House Entrance", cat: "eksterijer" },
+  { src: "sumskatajna slike/ulaz1.jpg", title: "Prilaz i terasica", titleEN: "Approach & Terrace", cat: "eksterijer" },
   
-  { src: "sumskatajna slike/dnevna1.jpg", title: "Prostrana dnevna soba", cat: "dnevna" },
-  { src: "sumskatajna slike/dnevna2.jpg", title: "Ugaona garnitura i TV", cat: "dnevna" },
-  { src: "sumskatajna slike/dnevna3.jpg", title: "Dnevni boravak - detalj", cat: "dnevna" },
-  { src: "sumskatajna slike/dnevna4.jpg", title: "Dnevna soba ugao", cat: "dnevna" },
-  { src: "sumskatajna slike/dnevna5.jpg", title: "Topla atmosfera dnevnog boravka", cat: "dnevna" },
-  { src: "sumskatajna slike/dnevna6.jpg", title: "Dnevna soba pogled", cat: "dnevna" },
+  { src: "sumskatajna slike/dnevna1.jpg", title: "Prostrana dnevna soba", titleEN: "Spacious Living Room", cat: "dnevna" },
+  { src: "sumskatajna slike/dnevna2.jpg", title: "Ugaona garnitura i TV", titleEN: "Sofa Lounge & TV", cat: "dnevna" },
+  { src: "sumskatajna slike/dnevna3.jpg", title: "Dnevni boravak - detalj", titleEN: "Living Room Detail", cat: "dnevna" },
+  { src: "sumskatajna slike/dnevna4.jpg", title: "Dnevna soba ugao", titleEN: "Living Room Corner", cat: "dnevna" },
+  { src: "sumskatajna slike/dnevna5.jpg", title: "Topla atmosfera dnevnog boravka", titleEN: "Warm Living Room Atmosphere", cat: "dnevna" },
+  { src: "sumskatajna slike/dnevna6.jpg", title: "Dnevna soba pogled", titleEN: "Living Room View", cat: "dnevna" },
   
-  { src: "sumskatajna slike/soba1(1).jpg", title: "Glavna spavaća soba", cat: "sobe" },
-  { src: "sumskatajna slike/soba1(2).jpg", title: "Francuski bračni ležaj", cat: "sobe" },
+  { src: "sumskatajna slike/soba1(1).jpg", title: "Glavna spavaća soba", titleEN: "Master Bedroom", cat: "sobe" },
+  { src: "sumskatajna slike/soba1(2).jpg", title: "Francuski bračni ležaj", titleEN: "Double King Bed", cat: "sobe" },
   
-  { src: "sumskatajna slike/soba2(1).jpg", title: "Druga spavaća soba", cat: "sobe" },
-  { src: "sumskatajna slike/soba2(2).jpg", title: "Udobni ležajevi soba 2", cat: "sobe" },
+  { src: "sumskatajna slike/soba2(1).jpg", title: "Druga spavaća soba", titleEN: "Second Bedroom", cat: "sobe" },
+  { src: "sumskatajna slike/soba2(2).jpg", title: "Udobni ležajevi soba 2", titleEN: "Cozy Beds Bedroom 2", cat: "sobe" },
 
-  { src: "sumskatajna slike/stepenice.jpg", title: "Unutrašnje drveno stepenište", cat: "sobe" },
-  { src: "sumskatajna slike/stepenice2.jpg", title: "Stepenište i hodnik", cat: "sobe" },
+  { src: "sumskatajna slike/stepenice.jpg", title: "Unutrašnje drveno stepenište", titleEN: "Interior Wooden Staircase", cat: "sobe" },
+  { src: "sumskatajna slike/stepenice2.jpg", title: "Stepenište i hodnik", titleEN: "Staircase & Hallway", cat: "sobe" },
   
-  { src: "sumskatajna slike/kuhinja.jpg", title: "Kompletno opremljena kuhinja", cat: "kuhinja-kupatilo" },
-  { src: "sumskatajna slike/kuhinja2.jpg", title: "Kuhinjski elementi i šporet", cat: "kuhinja-kupatilo" },
-  { src: "sumskatajna slike/kuhinja3.jpg", title: "Trpezarijski deo kuhinje", cat: "kuhinja-kupatilo" },
+  { src: "sumskatajna slike/kuhinja.jpg", title: "Kompletno opremljena kuhinja", titleEN: "Fully Equipped Kitchen", cat: "kuhinja-kupatilo" },
+  { src: "sumskatajna slike/kuhinja2.jpg", title: "Kuhinjski elementi i šporet", titleEN: "Kitchen Cabinets & Stove", cat: "kuhinja-kupatilo" },
+  { src: "sumskatajna slike/kuhinja3.jpg", title: "Trpezarijski deo kuhinje", titleEN: "Dining Area", cat: "kuhinja-kupatilo" },
   
-  { src: "sumskatajna slike/kupatilo.jpg", title: "Moderno kupatilo", cat: "kuhinja-kupatilo" },
-  { src: "sumskatajna slike/kupatilo2.jpg", title: "Tuš kabina", cat: "kuhinja-kupatilo" },
-  { src: "sumskatajna slike/kupatilo3.jpg", title: "Kupatilski ormarić i lavabo", cat: "kuhinja-kupatilo" },
-  { src: "sumskatajna slike/kupatilo4.jpg", title: "Kupatilo detalji", cat: "kuhinja-kupatilo" },
-  { src: "sumskatajna slike/kupatilo5.jpg", title: "Čisto kupatilo", cat: "kuhinja-kupatilo" },
-  { src: "sumskatajna slike/kupatilo6.jpg", title: "Opremljenost kupatila", cat: "kuhinja-kupatilo" },
-  { src: "sumskatajna slike/kupatilo7.jpg", title: "Pribor i fen", cat: "kuhinja-kupatilo" },
+  { src: "sumskatajna slike/kupatilo.jpg", title: "Moderno kupatilo", titleEN: "Modern Bathroom", cat: "kuhinja-kupatilo" },
+  { src: "sumskatajna slike/kupatilo2.jpg", title: "Tuš kabina", titleEN: "Shower Cabin", cat: "kuhinja-kupatilo" },
+  { src: "sumskatajna slike/kupatilo3.jpg", title: "Kupatilski ormarić i lavabo", titleEN: "Bathroom Vanity & Sink", cat: "kuhinja-kupatilo" },
+  { src: "sumskatajna slike/kupatilo4.jpg", title: "Kupatilo detalji", titleEN: "Bathroom Details", cat: "kuhinja-kupatilo" },
+  { src: "sumskatajna slike/kupatilo5.jpg", title: "Čisto kupatilo", titleEN: "Clean Bathroom", cat: "kuhinja-kupatilo" },
+  { src: "sumskatajna slike/kupatilo6.jpg", title: "Opremljenost kupatila", titleEN: "Bathroom Amenities", cat: "kuhinja-kupatilo" },
+  { src: "sumskatajna slike/kupatilo7.jpg", title: "Pribor i fen", titleEN: "Toiletries & Hairdryer", cat: "kuhinja-kupatilo" },
   
-  { src: "sumskatajna slike/letnjikovac.jpg", title: "Letnjikovac kraj reke", cat: "eksterijer" },
-  { src: "sumskatajna slike/letnjikovac2.jpg", title: "Odmaralište u dvorištu", cat: "eksterijer" },
-  { src: "sumskatajna slike/letnjikovac3.jpg", title: "Dvorište i hladovina", cat: "eksterijer" },
-  { src: "sumskatajna slike/letnjikovac4.jpg", title: "Pogled na letnjikovac", cat: "eksterijer" },
+  { src: "sumskatajna slike/letnjikovac.jpg", title: "Letnjikovac kraj reke", titleEN: "Gazebo by the River", cat: "eksterijer" },
+  { src: "sumskatajna slike/letnjikovac2.jpg", title: "Odmaralište u dvorištu", titleEN: "Outdoor Yard Seating", cat: "eksterijer" },
+  { src: "sumskatajna slike/letnjikovac3.jpg", title: "Dvorište i hladovina", titleEN: "Shaded Yard Area", cat: "eksterijer" },
+  { src: "sumskatajna slike/letnjikovac4.jpg", title: "Pogled na letnjikovac", titleEN: "View of the Gazebo", cat: "eksterijer" },
 
-  { src: "sumskatajna slike/reka.jpg", title: "Čista planinska reka", cat: "reka" },
-  { src: "sumskatajna slike/reka1.jpg", title: "Koritom reke pored kuće", cat: "reka" },
-  { src: "sumskatajna slike/reka2.jpg", title: "Žubor reke i priroda", cat: "reka" },
-  { src: "sumskatajna slike/reka3.jpg", title: "Zeleno okruženje rečice", cat: "reka" }
+  { src: "sumskatajna slike/reka.jpg", title: "Čista planinska reka", titleEN: "Clean Mountain River", cat: "reka" },
+  { src: "sumskatajna slike/reka1.jpg", title: "Koritom reke pored kuće", titleEN: "Riverbed Next to the House", cat: "reka" },
+  { src: "sumskatajna slike/reka2.jpg", title: "Žubor reke i priroda", titleEN: "Rushing River & Nature", cat: "reka" },
+  { src: "sumskatajna slike/reka3.jpg", title: "Zeleno okruženje rečice", titleEN: "Lush River Surroundings", cat: "reka" }
 ];
 
 let currentLightboxIndex = 0;
@@ -57,7 +57,34 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavbarScroll();
   setupMobileMenu();
   setupLightboxKeys();
+  setupLazyMap();
 });
+
+// Deferred Google Map Lazy Loading for Speed & Performance
+function setupLazyMap() {
+  const mapWrapper = document.getElementById('mapWrapper');
+  if (!mapWrapper) return;
+
+  const iframe = mapWrapper.querySelector('iframe');
+  if (!iframe) return;
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (iframe.dataset.src) {
+            iframe.src = iframe.dataset.src;
+          }
+          observer.unobserve(mapWrapper);
+        }
+      });
+    }, { rootMargin: '300px' });
+
+    observer.observe(mapWrapper);
+  } else {
+    if (iframe.dataset.src) iframe.src = iframe.dataset.src;
+  }
+}
 
 // Navbar Scroll Effect
 function setupNavbarScroll() {
@@ -87,6 +114,12 @@ function setupMobileMenu() {
       });
     });
   }
+}
+
+// Close mobile menu (called from nav-link onclick)
+function closeMenu() {
+  const navMenu = document.getElementById('navMenu');
+  if (navMenu) navMenu.classList.remove('active');
 }
 
 // Room Tabs Switcher
@@ -161,7 +194,7 @@ function openLightbox(index) {
 
   if (galleryData[index]) {
     img.src = galleryData[index].src;
-    caption.textContent = galleryData[index].title;
+    caption.textContent = currentLanguage === 'en' ? (galleryData[index].titleEN || galleryData[index].title) : galleryData[index].title;
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -181,7 +214,7 @@ function changeLightboxImg(dir) {
   img.style.opacity = 0;
   setTimeout(() => {
     img.src = galleryData[currentLightboxIndex].src;
-    caption.textContent = galleryData[currentLightboxIndex].title;
+    caption.textContent = currentLanguage === 'en' ? (galleryData[currentLightboxIndex].titleEN || galleryData[currentLightboxIndex].title) : galleryData[currentLightboxIndex].title;
     img.style.opacity = 1;
   }, 150);
 }
@@ -208,8 +241,15 @@ function toggleFaq(headerElem) {
 function setLanguage(lang) {
   currentLanguage = lang;
   
-  document.getElementById('btnSR').classList.toggle('active', lang === 'sr');
-  document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+  const allLangBtns = document.querySelectorAll('.lang-btn');
+  allLangBtns.forEach(btn => {
+    const isSr = btn.id.toLowerCase().includes('sr') || btn.textContent.trim() === 'SR';
+    if ((lang === 'sr' && isSr) || (lang === 'en' && !isSr)) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
 
   const translatableElements = document.querySelectorAll('[data-sr]');
   translatableElements.forEach(elem => {

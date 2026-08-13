@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://maps.google.com">
+  <link rel="dns-prefetch" href="https://maps.google.com">
 
   <!-- Critical Hero Image Preload -->
   <link rel="preload" as="image" href="sumskatajna slike/kuca.jpg" fetchpriority="high">
@@ -32,6 +34,7 @@
 <body>
 
   <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#pocetna" class="brand-logo">
@@ -44,27 +47,31 @@
       </button>
 
       <div class="nav-menu" id="navMenu">
-        <a href="#pocetna" class="nav-link" onclick="closeMenu()">Početna</a>
-        <a href="#o-apartmanu" class="nav-link" onclick="closeMenu()">O Apartmanu</a>
-        <a href="#prostorije" class="nav-link" onclick="closeMenu()">Prostorije</a>
-        <a href="#galerija" class="nav-link" onclick="closeMenu()">Galerija</a>
-        <a href="#atrakcije" class="nav-link" onclick="closeMenu()">Atrakcije</a>
-        <a href="#kucni-red" class="nav-link" onclick="closeMenu()">Kućni Red</a>
-        <a href="#kontakt" class="nav-link" onclick="closeMenu()">Kontakt</a>
+        <a href="#pocetna" class="nav-link" onclick="closeMenu()" data-sr="Početna" data-en="Home">Početna</a>
+        <a href="#o-apartmanu" class="nav-link" onclick="closeMenu()" data-sr="O Apartmanu" data-en="About Us">O Apartmanu</a>
+        <a href="#prostorije" class="nav-link" onclick="closeMenu()" data-sr="Prostorije" data-en="Rooms">Prostorije</a>
+        <a href="#galerija" class="nav-link" onclick="closeMenu()" data-sr="Galerija" data-en="Gallery">Galerija</a>
+        <a href="#atrakcije" class="nav-link" onclick="closeMenu()" data-sr="Atrakcije" data-en="Attractions">Atrakcije</a>
+        <a href="#kucni-red" class="nav-link" onclick="closeMenu()" data-sr="Kućni Red" data-en="House Rules">Kućni Red</a>
+        <a href="#kontakt" class="nav-link" onclick="closeMenu()" data-sr="Kontakt" data-en="Contact">Kontakt</a>
         <div class="nav-mobile-actions">
           <div class="lang-switch">
-            <button class="lang-btn active" id="btnSR" onclick="setLanguage('sr')">SR</button>
-            <button class="lang-btn" id="btnEN" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn active" id="btnSR-mob" onclick="setLanguage('sr')">SR</button>
+            <button class="lang-btn" id="btnEN-mob" onclick="setLanguage('en')">EN</button>
           </div>
           <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-booking-nav">
-            <i class="fa-solid fa-hotel"></i> <span>Booking</span>
+            <i class="fa-solid fa-hotel"></i> <span data-sr="Booking" data-en="Booking">Booking</span>
           </a>
         </div>
       </div>
 
       <div class="nav-actions">
+        <div class="lang-switch">
+          <button class="lang-btn active" id="btnSR" onclick="setLanguage('sr')">SR</button>
+          <button class="lang-btn" id="btnEN" onclick="setLanguage('en')">EN</button>
+        </div>
         <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-booking-nav">
-          <i class="fa-solid fa-hotel"></i> <span>Booking</span>
+          <i class="fa-solid fa-hotel"></i> <span data-sr="Booking" data-en="Booking">Booking</span>
         </a>
       </div>
     </div>
@@ -90,10 +97,10 @@
       <!-- Primary Action Buttons -->
       <div class="hero-cta">
         <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-booking-hero">
-          <i class="fa-solid fa-hotel"></i> <span>Rezervišite na Booking</span>
+          <i class="fa-solid fa-hotel"></i> <span data-sr="Rezervišite na Booking" data-en="Book on Booking.com">Rezervišite na Booking</span>
         </a>
         <a href="tel:0605210322" class="btn-primary">
-          <i class="fa-solid fa-phone"></i> <span>Pozovite 060 521 0322</span>
+          <i class="fa-solid fa-phone"></i> <span data-sr="Pozovite 060 521 0322" data-en="Call 060 521 0322">Pozovite 060 521 0322</span>
         </a>
       </div>
     </div>
@@ -104,14 +111,14 @@
     <div class="container booking-banner-flex">
       <div class="bb-item">
         <i class="fa-solid fa-star gold-star"></i>
-        <span>Pronađite nas na <strong>Booking.com</strong> sa vrhunskim recenzijama i ocenama!</span>
+        <span data-sr="Pronađite nas na <strong>Booking.com</strong> sa vrhunskim recenzijama i ocenama!" data-en="Find us on <strong>Booking.com</strong> with top reviews and ratings!">Pronađite nas na <strong>Booking.com</strong> sa vrhunskim recenzijama i ocenama!</span>
       </div>
       <div class="bb-item">
         <i class="fa-brands fa-instagram"></i>
-        <span>Zapratite nas: <a href="https://www.instagram.com/sumska_tajna" target="_blank">@sumska_tajna</a></span>
+        <span data-sr="Zapratite nas: <a href='https://www.instagram.com/sumska_tajna' target='_blank'>@sumska_tajna</a>" data-en="Follow us: <a href='https://www.instagram.com/sumska_tajna' target='_blank'>@sumska_tajna</a>">Zapratite nas: <a href="https://www.instagram.com/sumska_tajna" target="_blank">@sumska_tajna</a></span>
       </div>
       <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-sm-booking">
-        Pogledajte na Booking.com <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        <span data-sr="Pogledajte na Booking.com" data-en="View on Booking.com">Pogledajte na Booking.com</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
       </a>
     </div>
   </div>
@@ -186,10 +193,10 @@
 
           <div class="about-cta-box">
             <a href="tel:0605210322" class="btn-primary">
-              <i class="fa-solid fa-phone"></i> Pozovite: 060 521 0322
+              <i class="fa-solid fa-phone"></i> <span data-sr="Pozovite: 060 521 0322" data-en="Call: 060 521 0322">Pozovite: 060 521 0322</span>
             </a>
             <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-outline">
-              <i class="fa-solid fa-hotel"></i> Booking.com Profil
+              <i class="fa-solid fa-hotel"></i> <span data-sr="Booking.com Profil" data-en="Booking.com Profile">Booking.com Profil</span>
             </a>
           </div>
         </div>
@@ -201,7 +208,7 @@
   <section class="section-padding rooms-section" id="prostorije">
     <div class="container">
       <div class="text-center">
-        <span class="subtitle" data-sr="Struktura Smeštaja" data-en="Accommodation Details">Struktura Smeštaja</span>
+        <span class="subtitle" data-sr="Struktura smeštaja" data-en="Accommodation details">Struktura smeštaja</span>
         <h2 class="section-title" data-sr="Otkrijte svaki kutak Šumske Tajne" data-en="Discover every corner of Šumska Tajna">Otkrijte svaki kutak Šumske Tajne</h2>
         <p class="section-desc" data-sr="Kliknite na prostorije ispod da biste videli detaljne slike i sadržaje koji vas očekuju." data-en="Click on the spaces below to explore detailed pictures and features awaiting you.">
           Kliknite na prostorije ispod da biste videli detaljne slike i sadržaje koji vas očekuju.
@@ -210,12 +217,12 @@
 
       <!-- Tabs Navigation -->
       <div class="tabs-header">
-        <button class="tab-btn active" onclick="switchRoomTab('dnevna', this)">Dnevna Soba</button>
-        <button class="tab-btn" onclick="switchRoomTab('soba1', this)">Spavaća Soba 1</button>
-        <button class="tab-btn" onclick="switchRoomTab('soba2', this)">Spavaća Soba 2</button>
-        <button class="tab-btn" onclick="switchRoomTab('kuhinja', this)">Kuhinja & Trpezarija</button>
-        <button class="tab-btn" onclick="switchRoomTab('kupatilo', this)">Kupatilo</button>
-        <button class="tab-btn" onclick="switchRoomTab('letnjikovac', this)">Letnjikovac & Reka</button>
+        <button class="tab-btn active" onclick="switchRoomTab('dnevna', this)" data-sr="Dnevna soba" data-en="Living room">Dnevna soba</button>
+        <button class="tab-btn" onclick="switchRoomTab('soba1', this)" data-sr="Spavaća soba 1" data-en="Bedroom 1">Spavaća soba 1</button>
+        <button class="tab-btn" onclick="switchRoomTab('soba2', this)" data-sr="Spavaća soba 2" data-en="Bedroom 2">Spavaća soba 2</button>
+        <button class="tab-btn" onclick="switchRoomTab('kuhinja', this)" data-sr="Kuhinja & trpezarija" data-en="Kitchen & dining">Kuhinja & trpezarija</button>
+        <button class="tab-btn" onclick="switchRoomTab('kupatilo', this)" data-sr="Kupatilo" data-en="Bathroom">Kupatilo</button>
+        <button class="tab-btn" onclick="switchRoomTab('letnjikovac', this)" data-sr="Letnjikovac & reka" data-en="Gazebo & river">Letnjikovac & reka</button>
       </div>
 
       <!-- Dnevna Soba Pane -->
@@ -232,16 +239,16 @@
           </div>
         </div>
         <div class="room-details">
-          <span class="room-tag">Dnevni Boravak</span>
-          <h3>Prostrana Dnevna Soba</h3>
-          <p>Udoban i svetao dnevni boravak opremljen modernom ugaonom garniturom, TV-om sa kablovskim kanalima i toplim drvenim detaljima za opuštanje nakon planinskih šetnji.</p>
+          <span class="room-tag" data-sr="Dnevni Boravak" data-en="Living Room">Dnevni Boravak</span>
+          <h3 data-sr="Prostrana Dnevna Soba" data-en="Spacious Living Room">Prostrana Dnevna Soba</h3>
+          <p data-sr="Udoban i svetao dnevni boravak opremljen modernom ugaonom garniturom, TV-om sa kablovskim kanalima i toplim drvenim detaljima za opuštanje nakon planinskih šetnji." data-en="Comfortable and bright living room equipped with a modern sofa lounge, flat-screen cable TV, and warm wooden accents for relaxing after mountain hikes.">Udoban i svetao dnevni boravak opremljen modernom ugaonom garniturom, TV-om sa kablovskim kanalima i toplim drvenim detaljima za opuštanje nakon planinskih šetnji.</p>
           <div class="room-features-grid">
-            <div class="rf-item"><i class="fa-solid fa-tv"></i> Cable Flat-screen TV</div>
-            <div class="rf-item"><i class="fa-solid fa-couch"></i> Udobna ugaona garnitura</div>
-            <div class="rf-item"><i class="fa-solid fa-wifi"></i> Besplatan brzi Wi-Fi</div>
-            <div class="rf-item"><i class="fa-solid fa-fire"></i> Peć na drva & radijatori</div>
+            <div class="rf-item"><i class="fa-solid fa-tv"></i> <span data-sr="Kablovska TV" data-en="Cable Flat-screen TV">Cable Flat-screen TV</span></div>
+            <div class="rf-item"><i class="fa-solid fa-couch"></i> <span data-sr="Udobna ugaona garnitura" data-en="Comfortable sofa lounge">Udobna ugaona garnitura</span></div>
+            <div class="rf-item"><i class="fa-solid fa-wifi"></i> <span data-sr="Besplatan brzi Wi-Fi" data-en="Free high-speed Wi-Fi">Besplatan brzi Wi-Fi</span></div>
+            <div class="rf-item"><i class="fa-solid fa-fire"></i> <span data-sr="Peć na drva & radijatori" data-en="Wood stove & heating">Peć na drva & radijatori</span></div>
           </div>
-          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> <span data-sr="Pozovite 060 521 0322" data-en="Call 060 521 0322">Pozovite 060 521 0322</span></a>
         </div>
       </div>
 
@@ -257,16 +264,16 @@
           </div>
         </div>
         <div class="room-details">
-          <span class="room-tag">Glavna Soba</span>
-          <h3>Spavaća Soba 1</h3>
-          <p>Udoban bračni francuski ležaj sa kvalitetnom posteljinom. Mirna atmosfera pruža savršen san u svežini Mokre Gore.</p>
+          <span class="room-tag" data-sr="Glavna Soba" data-en="Master Bedroom">Glavna Soba</span>
+          <h3 data-sr="Spavaća Soba 1" data-en="Bedroom 1">Spavaća Soba 1</h3>
+          <p data-sr="Udoban bračni francuski ležaj sa kvalitetnom posteljinom. Mirna atmosfera pruža savršen san u svežini Mokre Gore." data-en="Comfortable double king bed with high-quality linens. Peaceful atmosphere for a restful sleep in mountain air.">Udoban bračni francuski ležaj sa kvalitetnom posteljinom. Mirna atmosfera pruža savršen san u svežini Mokre Gore.</p>
           <div class="room-features-grid">
-            <div class="rf-item"><i class="fa-solid fa-bed"></i> Francuski bračni ležaj</div>
-            <div class="rf-item"><i class="fa-solid fa-mattress-pillow"></i> Obezbeđeni peškiri & posteljina</div>
-            <div class="rf-item"><i class="fa-solid fa-window-maximize"></i> Mreža za komarce</div>
-            <div class="rf-item"><i class="fa-solid fa-plug"></i> Utičnice pored kreveta</div>
+            <div class="rf-item"><i class="fa-solid fa-bed"></i> <span data-sr="Francuski bračni ležaj" data-en="Double king bed">Francuski bračni ležaj</span></div>
+            <div class="rf-item"><i class="fa-solid fa-mattress-pillow"></i> <span data-sr="Obezbeđeni peškiri & posteljina" data-en="Fresh towels & linens included">Obezbeđeni peškiri & posteljina</span></div>
+            <div class="rf-item"><i class="fa-solid fa-window-maximize"></i> <span data-sr="Mreža za komarce" data-en="Mosquito net">Mreža za komarce</span></div>
+            <div class="rf-item"><i class="fa-solid fa-plug"></i> <span data-sr="Utičnice pored kreveta" data-en="Bedside electrical sockets">Utičnice pored kreveta</span></div>
           </div>
-          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> <span data-sr="Pozovite 060 521 0322" data-en="Call 060 521 0322">Pozovite 060 521 0322</span></a>
         </div>
       </div>
 
@@ -282,16 +289,16 @@
           </div>
         </div>
         <div class="room-details">
-          <span class="room-tag">Druga Soba</span>
-          <h3>Spavaća Soba 2</h3>
-          <p>Druga spavaća soba pogodna za decu ili dodatne goste, opremljena udobnim ležajevima, toplim tepisima i planinskim ambijentom.</p>
+          <span class="room-tag" data-sr="Druga Soba" data-en="Second Bedroom">Druga Soba</span>
+          <h3 data-sr="Spavaća Soba 2" data-en="Bedroom 2">Spavaća Soba 2</h3>
+          <p data-sr="Druga spavaća soba pogodna za decu ili dodatne goste, opremljena udobnim ležajevima, toplim tepisima i planinskim ambijentom." data-en="Second bedroom ideal for kids or extra guests, equipped with cozy single beds, warm carpets, and mountain decor.">Druga spavaća soba pogodna za decu ili dodatne goste, opremljena udobnim ležajevima, toplim tepisima i planinskim ambijentom.</p>
           <div class="room-features-grid">
-            <div class="rf-item"><i class="fa-solid fa-bed"></i> Udobni ležajevi</div>
-            <div class="rf-item"><i class="fa-solid fa-plug"></i> Utičnice pored kreveta</div>
-            <div class="rf-item"><i class="fa-solid fa-sun"></i> Prirodno svetlo</div>
-            <div class="rf-item"><i class="fa-solid fa-shield-halved"></i> Zvučna izolacija</div>
+            <div class="rf-item"><i class="fa-solid fa-bed"></i> <span data-sr="Udobni ležajevi" data-en="Comfortable single beds">Udobni ležajevi</span></div>
+            <div class="rf-item"><i class="fa-solid fa-plug"></i> <span data-sr="Utičnice pored kreveta" data-en="Bedside electrical sockets">Utičnice pored kreveta</span></div>
+            <div class="rf-item"><i class="fa-solid fa-sun"></i> <span data-sr="Prirodno svetlo" data-en="Natural light">Prirodno svetlo</span></div>
+            <div class="rf-item"><i class="fa-solid fa-shield-halved"></i> <span data-sr="Zvučna izolacija" data-en="Soundproofing">Zvučna izolacija</span></div>
           </div>
-          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> <span data-sr="Pozovite 060 521 0322" data-en="Call 060 521 0322">Pozovite 060 521 0322</span></a>
         </div>
       </div>
 
@@ -308,16 +315,16 @@
           </div>
         </div>
         <div class="room-details">
-          <span class="room-tag">Kulinarski Kutak</span>
-          <h3>Potpuno Opremljena Kuhinja</h3>
-          <p>Moderna kuhinja sa šporetom, rernom, frižiderom, posuđem, priborom za jelo i trpezarijskim stolom, idealna za pripremu ukusnih jela tokom boravka.</p>
+          <span class="room-tag" data-sr="Kulinarski Kutak" data-en="Kitchen & Dining">Kulinarski Kutak</span>
+          <h3 data-sr="Potpuno Opremljena Kuhinja" data-en="Fully Equipped Kitchen">Potpuno Opremljena Kuhinja</h3>
+          <p data-sr="Moderna kuhinja sa šporetom, rernom, frižiderom, posuđem, priborom za jelo i trpezarijskim stolom, idealna za pripremu ukusnih jela tokom boravka." data-en="Modern kitchen with stove, oven, refrigerator, cookware, cutlery, and dining table, ideal for preparing meals during your stay.">Moderna kuhinja sa šporetom, rernom, frižiderom, posuđem, priborom za jelo i trpezarijskim stolom, idealna za pripremu ukusnih jela tokom boravka.</p>
           <div class="room-features-grid">
-            <div class="rf-item"><i class="fa-solid fa-fire-burner"></i> Šporet sa rernom</div>
-            <div class="rf-item"><i class="fa-solid fa-snowflake"></i> Frižider</div>
-            <div class="rf-item"><i class="fa-solid fa-kitchen-set"></i> Kompletan pribor & posuđe</div>
-            <div class="rf-item"><i class="fa-solid fa-chair"></i> Trpezarijski sto</div>
+            <div class="rf-item"><i class="fa-solid fa-fire-burner"></i> <span data-sr="Šporet sa rernom" data-en="Stove with oven">Šporet sa rernom</span></div>
+            <div class="rf-item"><i class="fa-solid fa-snowflake"></i> <span data-sr="Frižider" data-en="Refrigerator">Frižider</span></div>
+            <div class="rf-item"><i class="fa-solid fa-kitchen-set"></i> <span data-sr="Kompletan pribor & posuđe" data-en="Full cookware & cutlery">Kompletan pribor & posuđe</span></div>
+            <div class="rf-item"><i class="fa-solid fa-chair"></i> <span data-sr="Trpezarijski sto" data-en="Dining table & chairs">Trpezarijski sto</span></div>
           </div>
-          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> <span data-sr="Pozovite 060 521 0322" data-en="Call 060 521 0322">Pozovite 060 521 0322</span></a>
         </div>
       </div>
 
@@ -335,16 +342,16 @@
           </div>
         </div>
         <div class="room-details">
-          <span class="room-tag">Higijena & Komfor</span>
-          <h3>Moderno Kupatilo sa Veš Mašinom</h3>
-          <p>Čisto i moderno kupatilo sa tuš kabinom, veš mašinom za pranje veša, fenom za kosu, svežim peškirima i toaletnim priborom.</p>
+          <span class="room-tag" data-sr="Higijena & Komfor" data-en="Bathroom & Comfort">Higijena & Komfor</span>
+          <h3 data-sr="Moderno Kupatilo sa Veš Mašinom" data-en="Modern Bathroom with Washing Machine">Moderno Kupatilo sa Veš Mašinom</h3>
+          <p data-sr="Čisto i moderno kupatilo sa tuš kabinom, veš mašinom za pranje veša, fenom za kosu, svežim peškirima i toaletnim priborom." data-en="Clean and modern bathroom with shower cabin, washing machine, hairdryer, fresh towels, and complimentary toiletries.">Čisto i moderno kupatilo sa tuš kabinom, veš mašinom za pranje veša, fenom za kosu, svežim peškirima i toaletnim priborom.</p>
           <div class="room-features-grid">
-            <div class="rf-item"><i class="fa-solid fa-shower"></i> Tuš kabina</div>
-            <div class="rf-item"><i class="fa-solid fa-soap"></i> Veš mašina</div>
-            <div class="rf-item"><i class="fa-solid fa-wind"></i> Fen za kosu</div>
-            <div class="rf-item"><i class="fa-solid fa-hot-tub-person"></i> Topla voda 24/7</div>
+            <div class="rf-item"><i class="fa-solid fa-shower"></i> <span data-sr="Tuš kabina" data-en="Walk-in shower cabin">Tuš kabina</span></div>
+            <div class="rf-item"><i class="fa-solid fa-soap"></i> <span data-sr="Veš mašina" data-en="Washing machine">Veš mašina</span></div>
+            <div class="rf-item"><i class="fa-solid fa-wind"></i> <span data-sr="Fen za kosu" data-en="Hairdryer">Fen za kosu</span></div>
+            <div class="rf-item"><i class="fa-solid fa-hot-tub-person"></i> <span data-sr="Topla voda 24/7" data-en="24/7 Hot water">Topla voda 24/7</span></div>
           </div>
-          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> <span data-sr="Pozovite 060 521 0322" data-en="Call 060 521 0322">Pozovite 060 521 0322</span></a>
         </div>
       </div>
 
@@ -362,16 +369,16 @@
           </div>
         </div>
         <div class="room-details">
-          <span class="room-tag">Eksterijer & Reka</span>
-          <h3>Dvorište uz Reku Kamešinu sa Letnjikovcem</h3>
-          <p>Jedinstveni letnjikovac opremljen stolom i klupama odmah pored šumovite reke Kamešine. Uživajte u jutarnjoj kafi ili roštiljanju uz žubor vode.</p>
+          <span class="room-tag" data-sr="Eksterijer & Reka" data-en="Outdoors & River">Eksterijer & Reka</span>
+          <h3 data-sr="Dvorište uz Reku Kamešinu sa Letnjikovcem" data-en="Private Yard by Kamešina River with Gazebo">Dvorište uz Reku Kamešinu sa Letnjikovcem</h3>
+          <p data-sr="Jedinstveni letnjikovac opremljen stolom i klupama odmah pored šumovite reke Kamešine. Uživajte u jutarnjoj kafi ili roštiljanju uz žubor vode." data-en="Unique covered gazebo equipped with table and benches right next to the Kamešina river. Enjoy morning coffee or BBQ with the sound of rushing water.">Jedinstveni letnjikovac opremljen stolom i klupama odmah pored šumovite reke Kamešine. Uživajte u jutarnjoj kafi ili roštiljanju uz žubor vode.</p>
           <div class="room-features-grid">
-            <div class="rf-item"><i class="fa-solid fa-water"></i> Reka Kamešina u dvorištu</div>
-            <div class="rf-item"><i class="fa-solid fa-umbrella-beach"></i> Nadstrešnica & garnitura</div>
-            <div class="rf-item"><i class="fa-solid fa-fire"></i> Betonirani roštilj</div>
-            <div class="rf-item"><i class="fa-solid fa-tree"></i> Privatna plaža kraj reke</div>
+            <div class="rf-item"><i class="fa-solid fa-water"></i> <span data-sr="Reka Kamešina u dvorištu" data-en="Kamešina river in the yard">Reka Kamešina u dvorištu</span></div>
+            <div class="rf-item"><i class="fa-solid fa-umbrella-beach"></i> <span data-sr="Nadstrešnica & garnitura" data-en="Covered gazebo with seating">Nadstrešnica & garnitura</span></div>
+            <div class="rf-item"><i class="fa-solid fa-fire"></i> <span data-sr="Betonirani roštilj" data-en="Outdoor BBQ grill">Betonirani roštilj</span></div>
+            <div class="rf-item"><i class="fa-solid fa-tree"></i> <span data-sr="Privatna plaža kraj reke" data-en="Private riverbank area">Privatna plaža kraj reke</span></div>
           </div>
-          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> Pozovite 060 521 0322</a>
+          <a href="tel:0605210322" class="btn-primary"><i class="fa-solid fa-phone"></i> <span data-sr="Pozovite 060 521 0322" data-en="Call 060 521 0322">Pozovite 060 521 0322</span></a>
         </div>
       </div>
 
@@ -382,8 +389,8 @@
   <section class="section-padding" id="galerija">
     <div class="container">
       <div class="text-center">
-        <span class="subtitle" data-sr="Foto Galerija" data-en="Photo Gallery">Foto Galerija</span>
-        <h2 class="section-title" data-sr="Fotografije Apartmana Šumska Tajna" data-en="Photos of Apartment Šumska Tajna">Fotografije Apartmana Šumska Tajna</h2>
+        <span class="subtitle" data-sr="Foto galerija" data-en="Photo gallery">Foto galerija</span>
+        <h2 class="section-title" data-sr="Fotografije apartmana Šumska Tajna" data-en="Photos of apartment Šumska Tajna">Fotografije apartmana Šumska Tajna</h2>
         <p class="section-desc" data-sr="Kliknite na bilo koju sliku za prikaz u punoj rezoluciji." data-en="Click on any photo to view in high resolution.">
           Kliknite na bilo koju sliku za prikaz u punoj rezoluciji.
         </p>
@@ -395,8 +402,8 @@
           <img src="sumskatajna slike/kuca.jpg" alt="Eksterijer">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
-            <div class="gallery-card-title">Kuća Šumska Tajna</div>
-            <div class="gallery-card-cat">Eksterijer kuća</div>
+            <div class="gallery-card-title" data-sr="Kuća Šumska Tajna" data-en="House Šumska Tajna">Kuća Šumska Tajna</div>
+            <div class="gallery-card-cat" data-sr="Eksterijer kuća" data-en="House Exterior">Eksterijer kuća</div>
           </div>
         </div>
 
@@ -404,8 +411,8 @@
           <img src="sumskatajna slike/dnevna1.jpg" alt="Dnevna Soba">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
-            <div class="gallery-card-title">Prostrani Dnevni Boravak</div>
-            <div class="gallery-card-cat">Dnevna Soba</div>
+            <div class="gallery-card-title" data-sr="Prostrani Dnevni Boravak" data-en="Spacious Living Room">Prostrani Dnevni Boravak</div>
+            <div class="gallery-card-cat" data-sr="Dnevna Soba" data-en="Living Room">Dnevna Soba</div>
           </div>
         </div>
 
@@ -413,8 +420,8 @@
           <img src="sumskatajna slike/soba1(1).jpg" alt="Spavaća Soba 1">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
-            <div class="gallery-card-title">Glavna Spavaća Soba</div>
-            <div class="gallery-card-cat">Bračni Ležaj</div>
+            <div class="gallery-card-title" data-sr="Glavna Spavaća Soba" data-en="Master Bedroom">Glavna Spavaća Soba</div>
+            <div class="gallery-card-cat" data-sr="Bračni Ležaj" data-en="Double King Bed">Bračni Ležaj</div>
           </div>
         </div>
 
@@ -422,8 +429,8 @@
           <img src="sumskatajna slike/soba2(1).jpg" alt="Spavaća Soba 2">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
-            <div class="gallery-card-title">Druga Spavaća Soba</div>
-            <div class="gallery-card-cat">Planinski Ležajevi</div>
+            <div class="gallery-card-title" data-sr="Druga Spavaća Soba" data-en="Second Bedroom">Druga Spavaća Soba</div>
+            <div class="gallery-card-cat" data-sr="Planinski Ležajevi" data-en="Single Beds">Planinski Ležajevi</div>
           </div>
         </div>
 
@@ -431,8 +438,8 @@
           <img src="sumskatajna slike/kuhinja.jpg" alt="Kuhinja">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
-            <div class="gallery-card-title">Kuhinja sa Trpezarijom</div>
-            <div class="gallery-card-cat">Kuhinja</div>
+            <div class="gallery-card-title" data-sr="Kuhinja sa Trpezarijom" data-en="Kitchen with Dining Area">Kuhinja sa Trpezarijom</div>
+            <div class="gallery-card-cat" data-sr="Kuhinja" data-en="Kitchen">Kuhinja</div>
           </div>
         </div>
 
@@ -440,8 +447,8 @@
           <img src="sumskatajna slike/kupatilo.jpg" alt="Kupatilo">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
-            <div class="gallery-card-title">Moderno Kupatilo</div>
-            <div class="gallery-card-cat">Kupatilo</div>
+            <div class="gallery-card-title" data-sr="Moderno Kupatilo" data-en="Modern Bathroom">Moderno Kupatilo</div>
+            <div class="gallery-card-cat" data-sr="Kupatilo" data-en="Bathroom">Kupatilo</div>
           </div>
         </div>
 
@@ -449,8 +456,8 @@
           <img src="sumskatajna slike/letnjikovac.jpg" alt="Letnjikovac">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
-            <div class="gallery-card-title">Letnjikovac u Dvorištu</div>
-            <div class="gallery-card-cat">Dvorište</div>
+            <div class="gallery-card-title" data-sr="Letnjikovac u Dvorištu" data-en="Gazebo in the Yard">Letnjikovac u Dvorištu</div>
+            <div class="gallery-card-cat" data-sr="Dvorište" data-en="Outdoor Yard">Dvorište</div>
           </div>
         </div>
 
@@ -458,8 +465,8 @@
           <img src="sumskatajna slike/reka.jpg" alt="Reka Kamešina">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
-            <div class="gallery-card-title">Reka Kamešina pored Kuće</div>
-            <div class="gallery-card-cat">Reka & Priroda</div>
+            <div class="gallery-card-title" data-sr="Reka Kamešina pored Kuće" data-en="Kamešina River by the House">Reka Kamešina pored Kuće</div>
+            <div class="gallery-card-cat" data-sr="Reka & Priroda" data-en="River & Nature">Reka & Priroda</div>
           </div>
         </div>
 
@@ -467,8 +474,8 @@
           <img src="sumskatajna slike/stepenice.jpg" alt="Stepenište">
           <div class="gallery-card-overlay">
             <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
-            <div class="gallery-card-title">Drveno Stepenište</div>
-            <div class="gallery-card-cat">Enterijer</div>
+            <div class="gallery-card-title" data-sr="Drveno Stepenište" data-en="Wooden Staircase">Drveno Stepenište</div>
+            <div class="gallery-card-cat" data-sr="Enterijer" data-en="Interior">Enterijer</div>
           </div>
         </div>
       </div>
@@ -479,8 +486,8 @@
   <section class="section-padding" id="atrakcije">
     <div class="container">
       <div class="text-center">
-        <span class="subtitle" data-sr="Udaljenosti i Lokacija" data-en="Distances & Location">Udaljenosti i Lokacija</span>
-        <h2 class="section-title" data-sr="Atrakcije i Lokalne Udaljenosti" data-en="Attractions & Distances">Atrakcije i Lokalne Udaljenosti</h2>
+        <span class="subtitle" data-sr="Udaljenosti i lokacija" data-en="Distances & location">Udaljenosti i lokacija</span>
+        <h2 class="section-title" data-sr="Atrakcije i lokalne udaljenosti" data-en="Attractions & distances">Atrakcije i lokalne udaljenosti</h2>
         <p class="section-desc" data-sr="Tačne udaljenosti od Apartmana Šumska Tajna do glavnih znamenitosti i planinskih lokaliteta." data-en="Exact distances from Apartment Šumska Tajna to top landmarks and mountain destinations.">
           Tačne udaljenosti od Apartmana Šumska Tajna do glavnih znamenitosti i planinskih lokaliteta.
         </p>
@@ -492,9 +499,9 @@
             <img src="sumskatajna slike/osmica.jpg" alt="Šarganska Osmica" loading="lazy" decoding="async">
           </div>
           <div class="sight-content">
-            <h4>Šarganska Osmica</h4>
-            <p>Čuvena uska pruga i vožnja vozom "Ćira" kroz bajkovite planinske usjeke.</p>
-            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> Samo 400m od apartmana</span>
+            <h4 data-sr="Šarganska Osmica" data-en="Šargan Eight Railway">Šarganska Osmica</h4>
+            <p data-sr="Čuvena uska pruga i vožnja vozom 'Ćira' kroz bajkovite planinske usjeke." data-en="Famous narrow-gauge railway and train ride 'Ćira' through scenic mountain tunnels.">Čuvena uska pruga i vožnja vozom "Ćira" kroz bajkovite planinske usjeke.</p>
+            <span class="sight-dist" data-sr="<i class='fa-solid fa-location-dot'></i> Samo 400m od apartmana" data-en="<i class='fa-solid fa-location-dot'></i> Only 400m from apartment"><i class="fa-solid fa-location-dot"></i> Samo 400m od apartmana</span>
           </div>
         </div>
 
@@ -503,9 +510,9 @@
             <img src="sumskatajna slike/drvengrad.jpg" alt="Drvengrad Mećavnik">
           </div>
           <div class="sight-content">
-            <h4>Drvengrad (Mećavnik)</h4>
-            <p>Etno selo režisera Emira Kusturice sa autentičnim drvenim građevinama i bioskopom.</p>
-            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> Samo 800m od apartmana</span>
+            <h4 data-sr="Drvengrad (Mećavnik)" data-en="Drvengrad (Mećavnik)">Drvengrad (Mećavnik)</h4>
+            <p data-sr="Etno selo režisera Emira Kusturice sa autentičnim drvenim građevinama i bioskopom." data-en="Ethno village created by film director Emir Kusturica featuring traditional wooden architecture.">Etno selo režisera Emira Kusturice sa autentičnim drvenim građevinama i bioskopom.</p>
+            <span class="sight-dist" data-sr="<i class='fa-solid fa-location-dot'></i> Samo 800m od apartmana" data-en="<i class='fa-solid fa-location-dot'></i> Only 800m from apartment"><i class="fa-solid fa-location-dot"></i> Samo 800m od apartmana</span>
           </div>
         </div>
 
@@ -514,9 +521,9 @@
             <img src="sumskatajna slike/bele vode.jpg" alt="Bela Voda">
           </div>
           <div class="sight-content">
-            <h4>Lekoviti Izvor "Bela Voda"</h4>
-            <p>Čuveni prirodni izvor visoko-alkalne vode u neposrednoj blizini.</p>
-            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> U neposrednoj blizini</span>
+            <h4 data-sr="Lekoviti Izvor 'Bela Voda'" data-en="Healing Spring 'Bela Voda'">Lekoviti Izvor "Bela Voda"</h4>
+            <p data-sr="Čuveni prirodni izvor visoko-alkalne vode u neposrednoj blizini." data-en="Famous natural spring of high-alkaline mineral water located nearby.">Čuveni prirodni izvor visoko-alkalne vode u neposrednoj blizini.</p>
+            <span class="sight-dist" data-sr="<i class='fa-solid fa-location-dot'></i> U neposrednoj blizini" data-en="<i class='fa-solid fa-location-dot'></i> Located nearby"><i class="fa-solid fa-location-dot"></i> U neposrednoj blizini</span>
           </div>
         </div>
 
@@ -525,9 +532,9 @@
             <img src="sumskatajna slike/iver.jpg" alt="Ski centar Iver">
           </div>
           <div class="sight-content">
-            <h4>Ski Centar Iver</h4>
-            <p>Uređene skijaške staze i žičare na planini Tara za zimske radosti.</p>
-            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> 10 km od apartmana</span>
+            <h4 data-sr="Ski centar Iver" data-en="Ski center Iver">Ski centar Iver</h4>
+            <p data-sr="Uređene skijaške staze i žičare na planini Tara za zimske radosti." data-en="Ski slopes and lifts on Mount Tara for winter sports enthusiasts.">Uređene skijaške staze i žičare na planini Tara za zimske radosti.</p>
+            <span class="sight-dist" data-sr="<i class='fa-solid fa-location-dot'></i> 10 km od apartmana" data-en="<i class='fa-solid fa-location-dot'></i> 10 km from apartment"><i class="fa-solid fa-location-dot"></i> 10 km od apartmana</span>
           </div>
         </div>
 
@@ -536,9 +543,9 @@
             <img src="sumskatajna slike/tara.jpg" alt="Nacionalni Park Tara">
           </div>
           <div class="sight-content">
-            <h4>Nacionalni Park Tara</h4>
-            <p>Guste crnogorične šume, vidikovci (Banjska Stena) i Zaovinsko jezero.</p>
-            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> 20 km od apartmana</span>
+            <h4 data-sr="Nacionalni Park Tara" data-en="Tara National Park">Nacionalni Park Tara</h4>
+            <p data-sr="Guste crnogorične šume, vidikovci (Banjska Stena) i Zaovinsko jezero." data-en="Dense evergreen forests, panoramic viewpoints (Banjska Stena), and Zaovine Lake.">Guste crnogorične šume, vidikovci (Banjska Stena) i Zaovinsko jezero.</p>
+            <span class="sight-dist" data-sr="<i class='fa-solid fa-location-dot'></i> 20 km od apartmana" data-en="<i class='fa-solid fa-location-dot'></i> 20 km from apartment"><i class="fa-solid fa-location-dot"></i> 20 km od apartmana</span>
           </div>
         </div>
 
@@ -547,9 +554,9 @@
             <img src="sumskatajna slike/andricgrad.jpg" alt="Andrićgrad Višegrad">
           </div>
           <div class="sight-content">
-            <h4>Andrićgrad & Višegrad</h4>
-            <p>Kamen grad na ušću Rzava u Drinu i čuveni most Mehmed-paše Sokolovića.</p>
-            <span class="sight-dist"><i class="fa-solid fa-location-dot"></i> 25 km od apartmana</span>
+            <h4 data-sr="Andrićgrad & Višegrad" data-en="Andrićgrad & Višegrad">Andrićgrad & Višegrad</h4>
+            <p data-sr="Kamen grad na ušću Rzava u Drinu i čuveni most Mehmed-paše Sokolovića." data-en="Stone town at the confluence of Rzav and Drina rivers and the UNESCO Mehmed Paša Sokolović Bridge.">Kamen grad na ušću Rzava u Drinu i čuveni most Mehmed-paše Sokolovića.</p>
+            <span class="sight-dist" data-sr="<i class='fa-solid fa-location-dot'></i> 25 km od apartmana" data-en="<i class='fa-solid fa-location-dot'></i> 25 km from apartment"><i class="fa-solid fa-location-dot"></i> 25 km od apartmana</span>
           </div>
         </div>
       </div>
@@ -560,9 +567,9 @@
   <section class="section-padding rules-section" id="kucni-red">
     <div class="container">
       <div class="text-center">
-        <span class="subtitle" data-sr="Pravila Objekta" data-en="House Rules">Pravila Objekta</span>
-        <h2 class="section-title" data-sr="Kućni Red & Informacije o Boravku" data-en="House Rules & Stay Info">Kućni Red & Informacije o Boravku</h2>
-        <p class="section-desc" data-sr="Zvanična pravila i uslovi boravka prema Booking.com profilu." data-en="Official rules and conditions according to Booking.com.">
+        <span class="subtitle" data-sr="Pravila objekta" data-en="House rules">Pravila objekta</span>
+        <h2 class="section-title" data-sr="Kućni red &amp; informacije o boravku" data-en="House rules &amp; stay info">Kućni red &amp; informacije o boravku</h2>
+        <p class="section-desc" data-sr="Zvanična pravila i uslovi boravka prema našem zvaničnom Booking.com profilu." data-en="Official house rules and stay policy according to our Booking.com profile.">
           Zvanična pravila i uslovi boravka prema našem zvaničnom Booking.com profilu.
         </p>
       </div>
@@ -571,27 +578,27 @@
         <div class="rule-card">
           <div class="rule-icon"><i class="fa-solid fa-clock"></i></div>
           <div class="rule-content">
-            <h4>Prijava (Check-in)</h4>
+            <h4 data-sr="Prijava (Check-in)" data-en="Check-in">Prijava (Check-in)</h4>
             <p class="rule-highlight">14:00 - 20:00h</p>
-            <p>Gosti su dužni da obaveste objekat o vremenu dolaska.</p>
+            <p data-sr="Gosti su dužni da obaveste objekat o vremenu dolaska." data-en="Guests are requested to inform the property of their estimated arrival time.">Gosti su dužni da obaveste objekat o vremenu dolaska.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
           <div class="rule-content">
-            <h4>Odjava (Check-out)</h4>
+            <h4 data-sr="Odjava (Check-out)" data-en="Check-out">Odjava (Check-out)</h4>
             <p class="rule-highlight">08:00 - 10:00h</p>
-            <p>Molimo vas da napustite prostorije u navedenom roku.</p>
+            <p data-sr="Molimo vas da napustite prostorije u navedenom roku." data-en="Please vacate the premises by the specified checkout time.">Molimo vas da napustite prostorije u navedenom roku.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-icon"><i class="fa-solid fa-paw"></i></div>
           <div class="rule-content">
-            <h4>Kućni Ljubimci</h4>
-            <p class="rule-highlight" style="color: var(--accent-gold);">U dogovoru sa vlasnikom</p>
-            <p>Kućni ljubimci su dobrodošli uz prethodan dogovor sa vlasnikom.</p>
+            <h4 data-sr="Kućni ljubimci" data-en="Pets">Kućni ljubimci</h4>
+            <p class="rule-highlight" style="color: var(--accent-gold);" data-sr="U dogovoru sa vlasnikom" data-en="Upon request with owner">U dogovoru sa vlasnikom</p>
+            <p data-sr="Kućni ljubimci su dobrodošli uz prethodan dogovor sa vlasnikom." data-en="Pets are welcome upon prior agreement with the owner.">Kućni ljubimci su dobrodošli uz prethodan dogovor sa vlasnikom.</p>
           </div>
         </div>
 
@@ -604,35 +611,35 @@
   <section class="section-padding booking-section" id="rezervacija">
     <div class="container">
       <div class="booking-cta-center">
-        <span class="subtitle" style="color: var(--accent-gold);">Rezervišite Vaš Boravak</span>
-        <h2 style="color: #FAF7F2; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.2rem;">Brza i jednostavna rezervacija</h2>
-        <p style="color: #D4C7BC; font-size: 1.1rem; max-width: 600px; margin: 0 auto 2.5rem auto;">
+        <span class="subtitle" style="color: var(--accent-gold);" data-sr="Rezervišite vaš boravak" data-en="Book your stay">Rezervišite vaš boravak</span>
+        <h2 style="color: #FAF7F2; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.2rem;" data-sr="Brza i jednostavna rezervacija" data-en="Fast and Easy Booking">Brza i jednostavna rezervacija</h2>
+        <p style="color: #D4C7BC; font-size: 1.1rem; max-width: 600px; margin: 0 auto 2.5rem auto;" data-sr="Apartman je dostupan za rezervaciju direktno putem Booking.com profila ili pozivom vlasnika." data-en="The apartment is available for booking directly via our Booking.com profile or by calling the host.">
           Apartman je dostupan za rezervaciju direktno putem Booking.com profila ili pozivom vlasnika.
         </p>
         <div class="booking-cta-btns">
           <a href="https://www.booking.com/Share-KlwrjL" target="_blank" class="btn-booking-hero">
-            <i class="fa-solid fa-hotel"></i> Rezervišite na Booking
+            <i class="fa-solid fa-hotel"></i> <span data-sr="Rezervišite na Booking" data-en="Book on Booking.com">Rezervišite na Booking</span>
           </a>
           <a href="tel:0605210322" class="btn-primary" style="background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.4); color: #FFF;">
-            <i class="fa-solid fa-phone"></i> Pozovite: 060 521 0322
+            <i class="fa-solid fa-phone"></i> <span data-sr="Pozovite: 060 521 0322" data-en="Call: 060 521 0322">Pozovite: 060 521 0322</span>
           </a>
         </div>
         <div class="booking-perks-row">
           <div class="booking-perk">
             <i class="fa-solid fa-wifi"></i>
-            <span>Besplatan Wi-Fi</span>
+            <span data-sr="Besplatan Wi-Fi" data-en="Free Wi-Fi">Besplatan Wi-Fi</span>
           </div>
           <div class="booking-perk">
             <i class="fa-solid fa-square-parking"></i>
-            <span>Besplatan Parking</span>
+            <span data-sr="Besplatan Parking" data-en="Free Parking">Besplatan Parking</span>
           </div>
           <div class="booking-perk">
             <i class="fa-solid fa-fire"></i>
-            <span>Grejanje</span>
+            <span data-sr="Grejanje" data-en="Heating">Grejanje</span>
           </div>
           <div class="booking-perk">
             <i class="fa-solid fa-money-bill"></i>
-            <span>Plaćanje gotovinom</span>
+            <span data-sr="Plaćanje gotovinom" data-en="Cash Payment">Plaćanje gotovinom</span>
           </div>
         </div>
       </div>
@@ -643,7 +650,7 @@
   <section class="section-padding">
     <div class="container">
       <div class="text-center">
-        <span class="subtitle" data-sr="Utisci Gostiju" data-en="Guest Reviews">Utisci Gostiju</span>
+        <span class="subtitle" data-sr="Utisci gostiju" data-en="Guest reviews">Utisci gostiju</span>
         <h2 class="section-title" data-sr="Šta naši gosti kažu o nama" data-en="What our guests say about us">Šta naši gosti kažu o nama</h2>
       </div>
 
@@ -652,12 +659,12 @@
           <div class="stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="review-text">"Prelep apartman, sve je bilo izuzetno čisto i mirišljavo! Letnjikovac pored reke Kamešine je savršeno mesto za opuštanje. Šarganska Osmica na svega 4 minuta šetnje!"</p>
+          <p class="review-text" data-sr="&quot;Prelep apartman, sve je bilo izuzetno čisto i mirišljavo! Letnjikovac pored reke Kamešine je savršeno mesto za opuštanje. Šarganska Osmica na svega 4 minuta šetnje!&quot;" data-en="&quot;Beautiful apartment, everything was exceptionally clean and fresh! The gazebo next to the Kamešina river is a perfect spot to relax. Šargan Eight is just a 4-minute walk away!&quot;">"Prelep apartman, sve je bilo izuzetno čisto i mirišljavo! Letnjikovac pored reke Kamešine je savršeno mesto za opuštanje. Šarganska Osmica na svega 4 minuta šetnje!"</p>
           <div class="reviewer-info">
             <div class="reviewer-avatar">M</div>
             <div class="reviewer-details">
               <h5>Marko i Ana</h5>
-              <span>Beograd, Srbija</span>
+              <span data-sr="Beograd, Srbija" data-en="Belgrade, Serbia">Beograd, Srbija</span>
             </div>
           </div>
         </div>
@@ -666,12 +673,12 @@
           <div class="stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="review-text">"Lokacija u Mokroj Gori je fantastična, 800m od Drvengrada. Dve spavaće sobe daju prekopotrebnu komociju za porodicu sa decom."</p>
+          <p class="review-text" data-sr="&quot;Lokacija u Mokroj Gori je fantastična, 800m od Drvengrada. Dve spavaće sobe daju prekopotrebnu komociju za porodicu sa decom.&quot;" data-en="&quot;Fantastic location in Mokra Gora, 800m from Drvengrad. Two bedrooms provide great comfort for a family with children.&quot;">"Lokacija u Mokroj Gori je fantastična, 800m od Drvengrada. Dve spavaće sobe daju prekopotrebnu komociju za porodicu sa decom."</p>
           <div class="reviewer-info">
             <div class="reviewer-avatar">S</div>
             <div class="reviewer-details">
               <h5>Stefan V.</h5>
-              <span>Novi Sad, Srbija</span>
+              <span data-sr="Novi Sad, Srbija" data-en="Novi Sad, Serbia">Novi Sad, Srbija</span>
             </div>
           </div>
         </div>
@@ -680,12 +687,12 @@
           <div class="stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="review-text">"Sve preporuke za Šumsku Tajnu! Kuhinja je kompletno opremljena sa veš mašinom u kupatilu, a žubor reke je neprocenjiv."</p>
+          <p class="review-text" data-sr="&quot;Sve preporuke za Šumsku Tajnu! Kuhinja je kompletno opremljena sa veš mašinom u kupatilu, a žubor reke je neprocenjiv.&quot;" data-en="&quot;Highly recommended! Fully equipped kitchen, washing machine in bathroom, and the sound of the river is priceless.&quot;">"Sve preporuke za Šumsku Tajnu! Kuhinja je kompletno opremljena sa veš mašinom u kupatilu, a žubor reke je neprocenjiv."</p>
           <div class="reviewer-info">
             <div class="reviewer-avatar">E</div>
             <div class="reviewer-details">
               <h5>Elena & Thomas</h5>
-              <span>Vienna, Austria</span>
+              <span data-sr="Beč, Austrija" data-en="Vienna, Austria">Vienna, Austria</span>
             </div>
           </div>
         </div>
@@ -698,9 +705,9 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
-          <span class="subtitle" data-sr="Kontaktirajte Nas" data-en="Contact Us">Kontaktirajte Nas</span>
+          <span class="subtitle" data-sr="Kontaktirajte nas" data-en="Contact us">Kontaktirajte nas</span>
           <h2 class="section-title" data-sr="Stojimo vam na raspolaganju" data-en="We are at your service">Stojimo vam na raspolaganju</h2>
-          <p class="section-desc" style="margin-left: 0; margin-bottom: 2rem;" data-sr="Imate pitanje ili želite rezervaciju? Pozovite nas direktno ili posetite naše zvanične naloge." data-en="Have a question or want to book? Call us directly or visit our official accounts.">
+          <p class="section-desc" style="margin-left: 0; margin-bottom: 2rem;" data-sr="Imate pitanje ili želite rezervaciju? Pozovite nas direktno ili posetite naše zvanične naloge." data-en="Have a question or want to book? Call us directly or visit our official pages.">
             Imate pitanje ili želite rezervaciju? Pozovite nas direktno ili posetite naše zvanične naloge.
           </p>
 
@@ -708,7 +715,7 @@
             <div class="contact-box">
               <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
               <div class="contact-text">
-                <h4>Telefon za Rezervacije</h4>
+                <h4 data-sr="Telefon za rezervacije" data-en="Reservation phone">Telefon za rezervacije</h4>
                 <p><a href="tel:0605210322" style="font-weight: 700; font-size: 1.1rem; color: var(--accent-deep-brown);">060 521 0322</a></p>
               </div>
             </div>
@@ -716,7 +723,7 @@
             <div class="contact-box">
               <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
               <div class="contact-text">
-                <h4>Instagram Profil</h4>
+                <h4 data-sr="Instagram profil" data-en="Instagram profile">Instagram profil</h4>
                 <p><a href="https://www.instagram.com/sumska_tajna" target="_blank" style="font-weight: 600; color: var(--accent-gold);">@sumska_tajna</a></p>
               </div>
             </div>
@@ -724,23 +731,23 @@
             <div class="contact-box">
               <div class="contact-icon"><i class="fa-solid fa-hotel"></i></div>
               <div class="contact-text">
-                <h4>Booking</h4>
-                <p><a href="https://www.booking.com/Share-KlwrjL" target="_blank" style="font-weight: 600; color: var(--accent-gold);">Rezervišite na Booking</a></p>
+                <h4 data-sr="Booking" data-en="Booking.com">Booking</h4>
+                <p><a href="https://www.booking.com/Share-KlwrjL" target="_blank" style="font-weight: 600; color: var(--accent-gold);" data-sr="Rezervišite na Booking" data-en="Book on Booking.com">Rezervišite na Booking</a></p>
               </div>
             </div>
 
             <div class="contact-box">
               <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
               <div class="contact-text">
-                <h4>Google Lokacija</h4>
-                <p><a href="https://share.google/7oTAUpoKocverm9Xw" target="_blank" style="font-weight: 600; color: var(--accent-gold);">Otvorite na Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                <h4 data-sr="Google lokacija" data-en="Google location">Google lokacija</h4>
+                <p><a href="https://share.google/7oTAUpoKocverm9Xw" target="_blank" style="font-weight: 600; color: var(--accent-gold);" data-sr="Otvorite na Google Maps <i class='fa-solid fa-arrow-up-right-from-square'></i>" data-en="Open on Google Maps <i class='fa-solid fa-arrow-up-right-from-square'></i>">Otvorite na Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="map-wrapper">
-          <iframe title="Mapa Apartman Šumska Tajna" src="https://maps.google.com/maps?q=Apartman%20Sumska%20Tajna%20Mokra%20Gora&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+        <div class="map-wrapper" id="mapWrapper">
+          <iframe title="Mapa Apartman Šumska Tajna" data-src="https://maps.google.com/maps?q=Apartman%20Sumska%20Tajna%20Mokra%20Gora&t=&z=15&ie=UTF8&iwloc=&output=embed" src="about:blank" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -755,23 +762,23 @@
             <img src="sumskatajna slike/logo.jpg" alt="Apartman Šumska Tajna Logo" class="brand-logo-img">
             <div class="brand-text">ŠUMSKA <span>TAJNA</span></div>
           </div>
-          <p>Zasebna planinska kuća u Mokroj Gori. 400m od Šarganske Osmice, 800m od Drvengrada.</p>
+          <p data-sr="Zasebna planinska kuća u Mokroj Gori. 400m od Šarganske Osmice, 800m od Drvengrada." data-en="Detached mountain chalet in Mokra Gora. 400m from Šargan Eight, 800m from Drvengrad.">Zasebna planinska kuća u Mokroj Gori. 400m od Šarganske Osmice, 800m od Drvengrada.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Navigacija</h4>
+          <h4 data-sr="Navigacija" data-en="Navigation">Navigacija</h4>
           <div class="footer-links">
-            <a href="#pocetna">Početna</a>
-            <a href="#o-apartmanu">O Apartmanu</a>
-            <a href="#prostorije">Prostorije</a>
-            <a href="#galerija">Galerija</a>
-            <a href="#kucni-red">Kućni Red</a>
-            <a href="#rezervacija">Cene & Rezervacija</a>
+            <a href="#pocetna" data-sr="Početna" data-en="Home">Početna</a>
+            <a href="#o-apartmanu" data-sr="O Apartmanu" data-en="About Us">O Apartmanu</a>
+            <a href="#prostorije" data-sr="Prostorije" data-en="Rooms">Prostorije</a>
+            <a href="#galerija" data-sr="Galerija" data-en="Gallery">Galerija</a>
+            <a href="#kucni-red" data-sr="Kućni Red" data-en="House Rules">Kućni Red</a>
+            <a href="#rezervacija" data-sr="Cene & Rezervacija" data-en="Rates & Booking">Cene & Rezervacija</a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>Kontakt & Linkovi</h4>
+          <h4 data-sr="Kontakt & Linkovi" data-en="Contact & Links">Kontakt & Linkovi</h4>
           <div class="footer-links">
             <a href="tel:0605210322"><i class="fa-solid fa-phone"></i> 060 521 0322</a>
             <a href="https://www.instagram.com/sumska_tajna" target="_blank"><i class="fa-brands fa-instagram"></i> @sumska_tajna</a>
@@ -781,14 +788,14 @@
         </div>
 
         <div class="footer-col">
-          <h4>Lokacija</h4>
-          <p>Mokra Gora, Zlatiborski okrug<br>Republika Srbija</p>
-          <p style="margin-top: 1rem; color: var(--accent-gold);"><i class="fa-solid fa-phone"></i> Direct Call: 060 521 0322</p>
+          <h4 data-sr="Lokacija" data-en="Location">Lokacija</h4>
+          <p data-sr="Mokra Gora, Zlatiborski okrug<br>Republika Srbija" data-en="Mokra Gora, Zlatibor District<br>Republic of Serbia">Mokra Gora, Zlatiborski okrug<br>Republika Srbija</p>
+          <p style="margin-top: 1rem; color: var(--accent-gold);" data-sr="<i class='fa-solid fa-phone'></i> Pozovite direktno: 060 521 0322" data-en="<i class='fa-solid fa-phone'></i> Direct Call: 060 521 0322"><i class="fa-solid fa-phone"></i> Direct Call: 060 521 0322</p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Apartman Šumska Tajna Mokra Gora. Sva prava zadržana.</p>
+        <p data-sr="&copy; 2026 Apartman Šumska Tajna Mokra Gora. Sva prava zadržana." data-en="&copy; 2026 Apartment Šumska Tajna Mokra Gora. All rights reserved.">&copy; 2026 Apartman Šumska Tajna Mokra Gora. Sva prava zadržana.</p>
       </div>
     </div>
   </footer>
@@ -820,7 +827,7 @@
   <!-- Toast Notification -->
   <div class="toast-msg" id="toastMsg">
     <i class="fa-solid fa-circle-check"></i>
-    <span id="toastText">Upit uspešno poslat!</span>
+    <span id="toastText" data-sr="Upit uspešno poslat!" data-en="Inquiry sent successfully!">Upit uspešno poslat!</span>
   </div>
 
   <!-- JavaScript -->
