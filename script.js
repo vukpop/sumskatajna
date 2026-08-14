@@ -186,46 +186,93 @@ function filterGallery(category) {
 }
 
 // Lightbox Logic
+let lbTouchStartX = 0;
+
 function openLightbox(index) {
   currentLightboxIndex = index;
   const modal = document.getElementById('lightboxModal');
-  const img = document.getElementById('lightboxImg');
-  const caption = document.getElementById('lightboxCaption');
+  if (!modal) return;
 
-  if (galleryData[index]) {
-    img.src = galleryData[index].src;
-    caption.textContent = currentLanguage === 'en' ? (galleryData[index].titleEN || galleryData[index].title) : galleryData[index].title;
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  _lbLoadImage(index);
+  _lbSetupSwipe(modal);
 }
 
 function closeLightbox() {
   const modal = document.getElementById('lightboxModal');
   modal.classList.remove('active');
-  document.body.style.overflow = 'auto';
+  document.body.style.overflow = '';
+}
+
+function lightboxBackdropClick(e) {
+  if (e.target === document.getElementById('lightboxModal')) {
+    closeLightbox();
+  }
 }
 
 function changeLightboxImg(dir) {
   currentLightboxIndex = (currentLightboxIndex + dir + galleryData.length) % galleryData.length;
-  const img = document.getElementById('lightboxImg');
-  const caption = document.getElementById('lightboxCaption');
+  _lbLoadImage(currentLightboxIndex);
+}
 
-  img.style.opacity = 0;
-  setTimeout(() => {
-    img.src = galleryData[currentLightboxIndex].src;
-    caption.textContent = currentLanguage === 'en' ? (galleryData[currentLightboxIndex].titleEN || galleryData[currentLightboxIndex].title) : galleryData[currentLightboxIndex].title;
-    img.style.opacity = 1;
-  }, 150);
+function _lbLoadImage(index) {
+  const img     = document.getElementById('lightboxImg');
+  const caption = document.getElementById('lightboxCaption');
+  const counter = document.getElementById('lightboxCounter');
+  const spinner = document.getElementById('lightboxSpinner');
+  const data    = galleryData[index];
+  if (!data) return;
+
+  // Show spinner, fade out current image
+  img.classList.add('fading');
+  spinner.classList.add('visible');
+
+  // Update counter immediately
+  if (counter) counter.textContent = `${index + 1} / ${galleryData.length}`;
+
+  const newImg = new Image();
+  newImg.src = data.src;
+  newImg.onload = () => {
+    img.src = data.src;
+    img.alt = data.title;
+    caption.textContent = currentLanguage === 'en'
+      ? (data.titleEN || data.title)
+      : data.title;
+
+    spinner.classList.remove('visible');
+    img.classList.remove('fading');
+  };
+  newImg.onerror = () => {
+    spinner.classList.remove('visible');
+    img.classList.remove('fading');
+  };
+}
+
+function _lbSetupSwipe(modal) {
+  // Prevent duplicate listeners
+  if (modal._swipeReady) return;
+  modal._swipeReady = true;
+
+  modal.addEventListener('touchstart', (e) => {
+    lbTouchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  modal.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - lbTouchStartX;
+    if (Math.abs(dx) > 50) {
+      changeLightboxImg(dx < 0 ? 1 : -1);
+    }
+  }, { passive: true });
 }
 
 function setupLightboxKeys() {
   document.addEventListener('keydown', (e) => {
     const modal = document.getElementById('lightboxModal');
-    if (!modal.classList.contains('active')) return;
+    if (!modal || !modal.classList.contains('active')) return;
 
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') changeLightboxImg(-1);
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  changeLightboxImg(-1);
     if (e.key === 'ArrowRight') changeLightboxImg(1);
   });
 }
